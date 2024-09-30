@@ -1,0 +1,512 @@
+\documentclass[]{beamer}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[italian]{babel}
+
+\title{La corrente elettrica continua}
+\author{\texorpdfstring{Mattia Cozzi\newline\href{mailto:cozzimattia@gmail.com}{\texttt{cozzimattia@gmail.com}}}{Mattia Cozzi}}
+\date{a.s.~2023/2024}
+
+%\documentclass[handout]{beamer}     %usare questa classe per generare l'handout
+%\usepackage{pgfpages}   %per mostrare più quadri nella stessa pagina
+%\pgfpagesuselayout{4 on 1}[a4paper,border shrink=5mm,landscape]
+\usetheme{Singapore}
+%\useoutertheme[left]{sidebar} %elementi intorno alle diapositive
+\setbeamercovered{dynamic} %modifica l'aspetto del testo grigetto delle diapositive future. Argomenti: invisible/transparent/dynamic
+\usecolortheme{orchid}
+%COLORE PRINCIPALE
+\definecolor{marroncino}{RGB}{156, 26, 0} % UBC Blue (primary)
+\setbeamercolor{structure}{fg=marroncino} % itemize, enumerate, etc
+
+\theoremstyle{plain}
+\newtheorem{teorema}{Teorema}
+
+\usepackage{tikz}
+\usepackage{circuitikz}
+
+\usepackage{pgf,pgfplots,graphicx}
+\usetikzlibrary{angles,quotes,arrows,shapes,decorations.markings}
+\pgfplotsset{compat=1.15}
+\usepgfplotslibrary{units,fillbetween} % to add units easily to axis
+
+\newcommand{\fem}{f_{em}}
+\usepackage{booktabs}
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Contenuti}
+\tableofcontents
+\end{frame}
+
+
+\section{Corrente}
+
+
+
+
+
+\begin{frame}
+\frametitle{La corrente elettrica}
+\begin{block}{Corrente elettrica}
+Una corrente elettrica è un moto ordinato di cariche elettriche.
+\end{block}\pause
+\begin{block}{Intensità di corrente elettrica}
+L'intensità di corrente si misura in \emph{ampere} (simbolo $A$) e vale:
+\begin{center}
+\colorbox{marroncino!30}{$ i = \dfrac{\Delta q}{\Delta t} $}
+\end{center}
+\end{block}\pause
+\begin{block}{Corrente elettrica continua}
+Una corrente elettrica è continua se la sua intensità non cambia nel tempo.
+\end{block}\pause
+L'intensità di corrente si misura con un \emph{amperometro}.
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Il verso della corrente}
+\begin{figure}
+  \includegraphics[width=.7\columnwidth]{img/corrente.png}
+\end{figure}
+\begin{alertblock}{Attenzione!}
+Il verso della corrente è definito come quello in cui si muovono (o si muoverebbero) le cariche positive.{\pause} Pertanto, se il conduttore è metallico, il verso effettivo del moto degli elettroni è \alert{opposto} a quello della corrente.
+\end{alertblock}
+\end{frame}
+
+
+\section{Circuiti}
+
+
+
+\begin{frame}
+\frametitle{Generatori di tensione}
+\begin{block}{Generatore di tensione continua}
+È un dispositivo capace di mantenere ai suoi capi una differenza di potenziale o tensione, $ \Delta V $, per un tempo idealmente indeterminato.
+\end{block}\pause
+Esempi di generatori di tensione sono le pile per i telecomandi ($ \Delta V = 1,5 \, V $) o le batterie per automobili ($ \Delta V = 12 \, V $).
+\begin{columns}
+\begin{column}{0.2\textwidth}
+\visible<2>{\includegraphics[width=\columnwidth]{img/1,5V.jpg}}
+\end{column}
+\begin{column}{0.3\textwidth}
+\visible<2>{\includegraphics[width=\columnwidth]{img/12V.jpg}}
+\end{column}
+\begin{column}{0.3\textwidth}
+\begin{figure}\centering
+\ctikzset{bipoles/length=1.5cm}
+\begin{circuitikz}[scale=0.5]
+\draw (0,0) to[battery, a=$\Delta V$, *-*] (4,0);
+\draw (0,4) to[battery1, a=$\Delta V$, *-*] (4,4);
+\end{circuitikz}
+\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Elementi di un circuito}
+\begin{block}{Circuito elettrico}
+Insieme di conduttori connessi in modo continuo e collegati ad un generatore.\pause\\~\\Può essere \emph{chiuso} (passa corrente) o \emph{aperto} (non passa corrente).
+\end{block}\pause
+Alcuni elementi di un circuito:
+\begin{figure}\centering
+\ctikzset{bipoles/length=1.0cm}
+\begin{circuitikz}[scale=0.4] 
+\draw (0,0) to[battery1, l=generatore, *-*] (4,0);
+\draw (6,0) to[lamp, l=lampadina, *-*] (10,0);
+\draw (12,0) to[push button, l=bottone, *-*] (16,0);
+\draw (18,0) to[R, l=resistore, *-*] (22,0);
+\draw (0,-5) to[nos, l=int aperto, *-*] (4,-5);
+\draw (6,-5) to[capacitor, l=condensatore, *-*] (10,-5);
+\draw (12,-5) to[ammeter, l=amperometro, *-*] (16,-5);
+\draw (18,-5) to[voltmeter, l=voltimetro, *-*] (22,-5);
+\end{circuitikz}
+\end{figure}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Circuito elettrico elementare}
+
+\begin{figure}\centering
+\ctikzset{bipoles/length=1.2cm}
+\begin{circuitikz}[scale=0.7]
+\draw (0,0) to[battery1, l=$\Delta V$](6,0);
+\draw (0,0) to[short, f_=$i$] (0,4);
+\draw (0,4) to[R, l=R] (6,4);
+\draw (6,4) to[short, f_=$i$] (6,0);
+\end{circuitikz}
+\end{figure}\pause
+\begin{block}{Risoluzione di un circuito}
+Risolvere un circuito significa individuare il valore e il verso di tutte le correnti presenti e, di conseguenza, anche il valore delle tensioni ai capi di tutti i resistori.
+\end{block}
+\end{frame}
+
+
+
+\section{Resistenza}
+
+\begin{frame}
+  \frametitle{La prima legge di Ohm}
+  \begin{block}{Prima legge di Ohm}
+Nei conduttori ohmici l'intensità di corrente è direttamente proporzionale alla differenza di potenziale applicata ai loro capi.
+\begin{center}
+\colorbox{marroncino!30}{$ i = \dfrac{\Delta V}{R} $}
+\end{center}
+\end{block}\pause
+  \begin{alertblock}{Resistenza}
+La prima legge di Ohm introduce (definisce) una nuova quantità: la resistenza, misurata in \emph{ohm} ($\Omega$).
+\end{alertblock}
+  
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{I resistori}
+  \begin{block}{Resistore}
+Un resistore è un componente elettrico che segue la prima legge di Ohm.
+\end{block}
+\begin{columns}
+\begin{column}{0.3\textwidth}
+\includegraphics[width=\columnwidth]{img/resistenza1.jpg}
+\end{column}
+\begin{column}{0.3\textwidth}
+\includegraphics[width=\columnwidth]{img/resistenza2.jpg}
+\end{column}
+\begin{column}{0.3\textwidth}
+\begin{figure}\centering
+\ctikzset{bipoles/length=1.5cm}
+\begin{circuitikz}[scale=0.5]
+\draw (0,0) to[R, *-*] (4,0);
+\end{circuitikz}
+\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Esempio 1}
+
+\begin{figure}\centering
+\ctikzset{bipoles/length=1.2cm}
+\begin{circuitikz}[scale=0.7]
+\draw (0,0) to[battery1, l=$\Delta V$, a=?](6,0);
+\draw (0,0) to[short, f_=$i$, l=$ 3 \, A $] (0,4);
+\draw (0,4) to[R, l=R, a=$ 4 \, \Omega $] (6,4);
+\draw (6,4) to[short, f_=$i$, l=$ 3 \, A $] (6,0);
+\end{circuitikz}
+\end{figure}
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Modalità di collegamento}
+
+\begin{figure}\centering
+\ctikzset{bipoles/length=0.6cm}
+\begin{circuitikz}[scale=0.5]
+\draw (0,0) to[battery, l=$\Delta V$](6,0);\pause
+\draw (0,0) to[lamp, f_=$i$] (0,4);\pause
+\draw (0,4) to[lamp, f_=$i$] (6,4);\pause
+\draw (6,4) to[lamp, f_=$i$] (6,0);
+\end{circuitikz}\pause
+\end{figure}
+
+\begin{block}{Collegamento in serie}
+Più conduttori sono collegati in serie se sono posti in successione tra loro.\\~\\\pause
+
+Essi sono \alert{attraversati dalla stessa corrente elettrica}.
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Modalità di collegamento}
+
+\begin{figure}\centering
+\ctikzset{bipoles/length=0.5cm}
+\begin{circuitikz}[scale=0.5]
+\draw (0,0) to[battery, a=$\Delta V$, f<=$i$](6,0);
+\draw (0,0) to[short] (0,4);
+\draw (0,4) to[short, f_=$i$] (2,4);\pause
+\draw (2,2.5) to[short] (2,5.5);
+\draw (2,5.5) to[lamp, i_=$i_1$] (4,5.5);
+\draw (4,5.5) to[short] (4,4);
+\draw (2,2.5) to[lamp, i_=$i_3$] (4,2.5);
+\draw (4,2.5) to[short] (4,4);
+\draw (2,4) to[lamp, i_=$i_2$, o-o] (4,4);\pause
+\draw (4,4) to[short] (6,4);
+\draw (6,4) to[short, f_=$i$] (6,0);
+\end{circuitikz}\pause
+\end{figure}
+
+\begin{block}{Collegamento in parallelo}
+Più conduttori sono collegati in parallelo se hanno le estremità connesse tra loro.\\~\\\pause
+Essi sono \alert{sottoposti alla stessa differenza di potenziale}.
+\end{block}
+\end{frame}
+
+
+
+
+
+\begin{frame}
+  \frametitle{Collegamento di resistori}
+  \begin{block}{Resistenza equivalente}
+Si chiama resistenza equivalente $ R_{eq} $ della rete di resistori quella di un singolo resistore che, sottoposto alla stessa differenza di potenziale $ \Delta V $ a cui è soggetta l’intera rete, assorbe dal generatore la stessa corrente elettrica.
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Collegamento in serie}
+
+\begin{figure}\centering
+\ctikzset{bipoles/length=1.0cm}
+\begin{circuitikz}[scale=0.7]
+\draw (0,0) to[battery, l=$\Delta V$](6,0);
+\draw (0,0) to[R=$R_1$, f_=$i$] (0,4);
+\draw (0,4) to[R=$R_2$, f_=$i$] (6,4);
+\draw (6,4) to[R=$R_3$, f_=$i$] (6,0);
+\end{circuitikz}
+\end{figure}
+\begin{center}
+\colorbox{marroncino!30}{$ R_{eq} = R_1 + R_2 + R_3 + ... $}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Collegamento in parallelo}
+
+\begin{figure}\centering
+\ctikzset{bipoles/length=0.6cm}
+\begin{circuitikz}[scale=0.7]
+\draw (0,0) to[battery, a=$\Delta V$, f<=$i$](6,0);
+\draw (0,0) to[short] (0,4);
+\draw (0,4) to[short, f_=$i$] (2,4);
+\draw (2,2.5) to[short] (2,5.5);
+\draw (2,5.5) to[R=$R_1$, i_=$i_1$] (4,5.5);
+\draw (4,5.5) to[short] (4,4);
+\draw (2,2.5) to[R=$R_3$, i_=$i_3$] (4,2.5);
+\draw (4,2.5) to[short] (4,4);
+\draw (4,4) to[short] (6,4);
+\draw (2,4) to[R=$R_2$, i_=$i_2$, o-o] (4,4);
+\draw (6,4) to[short, f_=$i$] (6,0);
+\end{circuitikz}
+\end{figure}
+\begin{center}
+\colorbox{marroncino!30}{$ \frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + ... $}
+\end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Esempio 2}
+\begin{columns}
+\begin{column}{0.4\textwidth}
+\visible<1->{
+\vspace*{-1 cm}
+\begin{figure}\centering
+\ctikzset{bipoles/length=1.0cm}
+\begin{circuitikz}[scale=0.7]
+\draw (0,0) to[battery, l=$\Delta V$](6,0);
+\draw (0,0) to[R, a=$ 3\, \Omega $] (0,4);
+\draw (0,4) to[R, a=$ 4\, \Omega $] (6,4);
+\draw (6,4) to[R, a=$ 6\, \Omega $] (6,0);
+\end{circuitikz}
+\end{figure}
+\[ R_{eq} = 3 \, \Omega + 4 \, \Omega + 6 \, \Omega = 13 \, \Omega  \]
+}
+
+\end{column}
+\begin{column}{0.5\textwidth}
+
+\visible<2->{
+
+\begin{figure}\centering
+\ctikzset{bipoles/length=.7cm}
+\begin{circuitikz}[scale=0.7]
+\draw (0,0) to[battery, l=$\Delta V$](6,0);
+\draw (0,0) to[short] (0,4);
+\draw (0,4) to[short] (2,4);
+\draw (2,2.5) to[short] (2,5.5);
+\draw (2,5.5) to[R, a=$ 3\, \Omega $] (4,5.5);
+\draw (4,5.5) to[short] (4,4);
+\draw (2,2.5) to[R, a=$ 6\, \Omega $] (4,2.5);
+\draw (4,2.5) to[short] (4,4);
+\draw (4,4) to[short] (6,4);
+\draw (2,4) to[R, o-o, a=$ 4\, \Omega $] (4,4);
+\draw (6,4) to[short] (6,0);
+\end{circuitikz}
+\end{figure}
+$ \dfrac{1}{R_{eq}} = \dfrac{1}{3\, \Omega} + \dfrac{1}{4\, \Omega} + \dfrac{1}{6\, \Omega} = \dfrac{9}{12\, \Omega} $}
+
+~
+
+\visible<3>{\[ R_{eq} = \dfrac{12}{9} \, \Omega = 1,33 \, \Omega \]
+}
+\end{column}
+\end{columns}
+  
+  
+  
+  
+\end{frame}
+
+
+
+\section{Kirchhoff}
+
+\begin{frame}
+  \frametitle{Nodi e maglie}
+  \begin{block}{Nodo}
+    Un nodo è un punto in cui convergono tre o più conduttori.
+    \begin{figure}\centering
+\ctikzset{bipoles/length=1.2cm}
+\begin{circuitikz}[scale=0.2]
+\draw (-1,0) to[short, -*] (1,0);
+\draw (2,2) to[short] (1,0);
+\draw (2,-2) to[short] (1,0);
+\end{circuitikz}
+\end{figure}
+  \end{block}\pause
+  
+  \begin{block}{Maglia}
+    Una maglia è un tratto chiuso di circuito.
+\begin{figure}\centering
+\ctikzset{bipoles/length=0.6cm}
+\begin{circuitikz}[scale=0.25]
+\draw (0,0) to[battery1](6,0);
+\draw (0,0) to[short] (0,4);
+\draw (0,4) to[short] (1,4);
+\draw[red] (1,2.5) to[short] (1,5.5);
+\draw[red] (1,5.5) to[R, color=red] (5,5.5);
+\draw[red] (5,5.5) to[short] (5,4);
+\draw[red] (1,2.5) to[R, color=red] (5,2.5);
+\draw[red] (5,2.5) to[short] (5,4);
+\draw (5,4) to[short] (6,4);
+\draw (6,4) to[short] (6,0);
+\end{circuitikz}
+\end{figure}
+  \end{block}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Le due leggi}
+  \begin{block}{Legge dei nodi}
+  La somma delle intensità di corrente entranti in un nodo è uguale alla somma di quelle uscenti.
+  \begin{center}
+\colorbox{marroncino!30}{$ \sum i_k = 0 $}
+\end{center}\pause
+È conseguenza del principio di conservazione della carica.
+  \end{block}\pause
+  
+  \begin{block}{Legge delle maglie}
+    La somma algebrica delle differenze di potenziale che si incontrano percorrendo una maglia è uguale a zero.
+  \begin{center}
+\colorbox{marroncino!30}{$ \sum \Delta V_k = 0 $}
+\end{center}\pause
+È conseguenza del principio di conservazione dell'energia.
+  \end{block}
+\end{frame}
+
+\section{Energia}
+
+
+\begin{frame}
+  \frametitle{Trasformazione dell'energia elettrica}
+  \begin{block}{Effetto Joule}
+  Dissipazione di energia potenziale elettrica sotto forma di calore (ferro da stiro, asciugacapelli, ecc.).
+  \end{block}\pause
+  
+  ~
+  
+  \begin{block}{Potenza dissipata}
+    La potenza dissipata da un resistore è la rapidità con cui l'energia elettrica è trasformata in energia interna del resistore.
+  \begin{center}
+\colorbox{marroncino!30}{$ P = i^2 \cdot R = i \cdot \Delta V $}
+\end{center}
+  \end{block}
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{Il kilowattora}
+  \begin{block}{Kilowattora}
+  Un kilowattora è l’energia assorbita in un'ora da un dispositivo che dissipa la potenza di $1000\, W$:
+  \begin{center}
+\colorbox{marroncino!30}{$ 1 \, kWh = 1000 \, W \times 3600 \, s = 3,6 \times 10^6 \, J $}
+\end{center}
+  \end{block}
+    \begin{figure}
+  \includegraphics[width=0.25\columnwidth]{img/contatore.jpg}
+    \end{figure}
+\end{frame}
+
+\section{Resistività}
+
+
+\begin{frame}
+\frametitle{Seconda legge di Ohm}
+\begin{block}{Seconda legge di Ohm}
+  La resistenza di un filo conduttore è direttamente proporzionale alla sua lunghezza $ L $ e inversamente proporzionale alla sua sezione $ A $.
+  \begin{center}
+    \colorbox{marroncino!30}{$ R = \rho \cdot \dfrac{L}{A} $}
+  \end{center}
+  Il coefficiente $ \rho $ è detto \alert{resistività} e dipende dal materiale di cui è fatto il filo e dalla sua temperatura. Si misura in $ \Omega \cdot m $.
+\end{block}
+\begin{figure}
+  \includegraphics[width=.4\columnwidth]{img/ohm2.jpg}
+\end{figure}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Resistività a $ 293 \, K $}
+\begin{table}[htb]\centering\footnotesize
+  \begin{tabular}{rc}\toprule
+  \textbf{Materiale} & \textbf{Resistività a $ 20\, ^\circ C$ [$ \Omega \cdot m $]}\\\midrule
+  alluminio & $ 2,8 \times 10^{-8} $\\\addlinespace[1em] 
+  ferro     & $ 1,0 \times 10^{-7} $\\\addlinespace[1em]
+  rame      & $ 1,7 \times 10^{-8} $\\\addlinespace[1em]
+  silicio   & $ 1,0 \times 10^{2}-1,0 \times 10^{3} $\\\addlinespace[1em]
+  vetro     & $ 10^{10}-10^{14} $\\\bottomrule
+  \end{tabular}
+  \end{table}\pause
+
+  ~
+
+Conoscere il valore della resistività permette di dire se un certo materiale è un buon conduttore (come il rame) e un buon isolante (come il vetro).\pause
+
+~
+
+Le sostanze intermedie (come il silicio) sono dette \alert{semiconduttori}.
+\end{frame}
+
+
+
+
+
+\end{document}

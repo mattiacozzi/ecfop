@@ -1,0 +1,445 @@
+\documentclass[handout]{beamer}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[italian]{babel}
+
+\title{Creazione di un curriculum}
+\author{Mattia Cozzi}
+\date{a.f.~2024/2025}
+
+
+%\documentclass[handout]{beamer}     %usare questa classe per generare l'handout
+
+%\usepackage{pdfpages}   %per mostrare più quadri nella stessa pagina
+%\pgfpagesuselayout{4 on 1}[a4paper,border shrink=5mm,landscape]
+
+
+\usetheme{Singapore}
+%\useoutertheme[left]{sidebar} %elementi intorno alle diapositive
+\setbeamercovered{dynamic} %modifica l'aspetto del testo grigetto delle diapositive future. Argomenti: invisible/transparent/dynamic
+
+
+%COLORE PRINCIPALE
+\definecolor{verde}{RGB}{2, 194, 117} % UBC Blue (primary)
+\setbeamercolor{structure}{fg=verde} % itemize, enumerate, etc
+\setbeamercolor{alerted text}{fg=verde}
+
+
+\usecolortheme{orchid}
+
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Contenuti}
+\tableofcontents
+\end{frame}
+
+
+
+\section{Introduzione}
+
+
+\begin{frame}
+\frametitle{Ricerca di personale}
+Quando un'azienda è alla ricerca di personale \alert{può muoversi in maniera diversa} a seconda della figura ricercata, della propria cultura aziendale ed della propria policy di selezione e gestione del personale.\pause
+
+~
+
+Le aziende medio-grandi hanno un reparto che si occupa di selezione e gestione del personale (\alert{HR}, \emph{human resources}).\pause
+
+~
+
+Nelle aziende più piccole (ad esempio a conduzione familiare) può essere direttamente il/la titolare o un suo incaricato/a a gestire la fase di selezione.
+\end{frame}
+
+\begin{frame}
+\frametitle{Modalità di ricerca di personale (1)}
+Esistono diversi modi di trovare nuovi lavoratori e lavoratrici:
+\begin{itemize}
+  \item \alert{informalmente}, attivando la propria rete di relazioni, chiedendo di segnare nominativi di persone valide;{\pause} in questi casi può prevalere il rapporto di fiducia con chi consiglia il personale, a scapito della valutazione delle competenze.
+\end{itemize}
+\visible<2->{\begin{figure}
+  \includegraphics[width=.6\columnwidth]{img/conversazione.jpg}
+\end{figure}}
+\end{frame}
+
+\begin{frame}
+\frametitle{Modalità di ricerca di personale (2)}
+\begin{itemize}\setcounter{enumi}{1}
+  \item con \alert{banche dati interne e sito aziendale}, cioè cercando tra i curricula che ricevono (\alert{candidatura spontanea}) o attivando la sezione ``Carriere/Lavora con noi'' del loro sito web.
+\end{itemize}
+\begin{figure}
+  \includegraphics[width=.8\columnwidth]{img/lavoraconnoi.png}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Modalità di ricerca di personale (3)}
+\begin{itemize}\setcounter{enumi}{1}
+  \item con \alert{annunci su giornali e portali online}, come \href{https://www.linkedin.com/}{LinkedIn}, \href{https://it.indeed.com/}{Indeed} o \href{https://www.infojobs.it/}{Infojobs}; in questi casi bisogna essere molto attenti ad evitare truffe e raggiri, diffidare di chi offre guadagni rapidi e da annunci senza informazioni.
+\end{itemize}
+\begin{figure}
+  \includegraphics[width=.8\columnwidth]{img/indeed.png}
+\end{figure}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Modalità di ricerca di personale (4)}
+\begin{itemize}\setcounter{enumi}{1}
+  \item con \alert{intermediari}, come centri per l'impiego, centri di formazione professionale o agenzie di ricerca e selezione personale;{\pause} queste ultime sono dette anche \alert{agenzie interinali}, come Adecco, Randstad, Etjca, ecc.
+\end{itemize}
+\visible<2->{\begin{figure}
+  \includegraphics[width=.8\columnwidth]{img/adecco.png}
+\end{figure}}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Cos'è il curriculum}
+Il termine \alert{curriculum vitae} viene dal latino e significa ``percorso di vita'': serve a presentare la propria situazione personale, scolastica e lavorativa.\pause
+
+~
+
+È una sorta di ``biglietto da visita professionale'', con cui proporsi per un posto e partecipare alla selezione di personale.\pause
+
+~
+
+È la prima cosa che viene richiesta durante la ricerca di un lavoro, ed è ciò che usiamo per \alert{arrivare ad un colloquio di lavoro}.
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Curriculum efficace e non efficace}
+È importante preparare CV \alert{mirati e personalizzati} in base all'azienda che stiamo contattando e per il profilo per il quale ci stiamo candidando.\pause
+
+~
+
+Con un buon CV dobbiamo:
+\begin{itemize}
+  \item comunicare informazioni \alert{interessanti};\pause
+  \item comunicare informazioni \alert{pertinenti};\pause
+  \item \alert{incuriosire} il lettore.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Caratteristiche fondamentali di un buon CV}
+Un buon curriculum deve essere:
+\begin{itemize}
+  \item \alert{completo}, con tutte le informazioni utili su di noi, sia lavorativamente sia sulla nostra personalità;\pause
+  \item \alert{sintetico}, evitando frasi ridondanti, lungo al massimo due pagine;\pause
+  \item \alert{chiaro e comunicativo}, scritto al computer e facendo risaltare le informazioni più interessanti;\pause
+  \item \alert{mirato}, scritto in modo da avvicinarsi il più possibile, senza mentire, alla posizione per cui ci candidiamo.
+\end{itemize}
+\end{frame}
+
+\section{Contenuto}
+
+
+\begin{frame}
+\frametitle{Dati da indicare necessariamente}
+\begin{itemize}
+  \item Nome e cognome;\pause
+  \item residenza;\pause
+  \item numero di telefono e indirizzo email;\pause
+  \item possesso patente/i e mezzi di trasporto;\pause
+  \item percorso di istruzione e formazione (quanto basta);\pause
+  \item esperienze professionali precedenti, con riferimenti specifici a luoghi e date;\pause
+  \item stage e tirocini;\pause
+  \item conoscenze tecniche (\emph{hard skills});\pause
+  \item conoscenze linguistiche (con livello di padronanza);\pause
+  \item conoscenze informatiche (con livello di padronanza);\pause
+  \item competenze trasversali (\emph{soft skills}: capacità di organizzare il lavoro, rapporto coi colleghi, ecc.).
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Devo scrivere tutto?}
+Dati da riportare se richiesto:
+\begin{itemize}
+  \item data di nascita;\pause
+  \item fotografia (primo piano, sfondo neutro).\pause
+\end{itemize}
+
+~
+
+Dati da non riportare:
+\begin{itemize}
+  \item segno zodiacale;\pause
+  \item informazioni inutili su di noi;\pause
+  \item dati fisici, a meno che non siano richiesti per lavoro (es.~modella).\pause
+\end{itemize}
+
+~
+
+Non ci devono essere errori grammaticali o di battitura!\pause
+
+~
+
+Attenzione a riportare i propri contatti social, può essere un'arma a doppio taglio!
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Esperienze non lavorative}
+Inserire le esperienze non lavorative nel curriculum a volte può \alert{fare la differenza}.\pause
+
+~
+
+Aver partecipato ad incontri, corsi di formazione, attività di volontariato ed altre esperienze attinenti al ruolo che si andrà a ricoprire potrebbe essere decisivo per un'assunzione.\pause
+
+~
+
+Di fronte ad un altro profilo con un percorso professionale e formativo pari o simile al nostro, il selezionatore potrebbe decidere di darci un'occasione proprio in virtù della nostra \alert{esperienza al di fuori del lavoro}.
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Soft skills}
+Alcuni esempi di \emph{soft skills}:
+\begin{itemize}
+  \item essere creativi/e;\pause
+  \item essere in grado di prendere decisioni;\pause
+  \item possedere l'intelligenza emotiva, cioè saper ascoltare e capire come stanno le persone intorno a noi;\pause
+  \item saper fare Problem Solving, cioè ragionare per risolvere problemi;\pause
+  \item capacità di gestire un gruppo;\pause
+  \item saper gestire lo stress;\pause
+  \item essere proattivo/a, cioè saper prendere iniziative senza subire le decisioni degli altri.
+\end{itemize}
+  
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Consenso al trattamento dei dati}
+Uno degli errori più comuni frequenti nella scrittura di un CV è quello di \alert{dimenticarsi di inserire l'autorizzazione al trattamento dei dati personali}.\pause
+
+~
+
+Inserirla significa autorizzare chi riceve il CV ad analizzare ed usare i dati del candidato/a, che sono tutelati dalla legge sulla privacy.\pause
+
+~
+
+In sostanza, senza quella dicitura legalmente le aziende non potrebbero contattarti. È quindi importante ricordarsi di inserirla in basso nell’ultima pagina del CV, con data e firma.
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Dicitura standard per il trattamendo dei dati}
+Esistono diverse formule per acconsentire al trattamento dei dati personali, come ad esempio:
+
+~
+
+\begin{quote}
+  Autorizzo il trattamento dei dati personali contenuti nel mio curriculum vitae in base al \alert{Dlgs 196 del 30 giugno 2003} e all’\alert{art. 13 del GDPR}.
+\end{quote}\pause
+
+~
+
+~
+
+Ricorda infine sempre di \alert{datare e firmare il CV}!
+\end{frame}
+
+
+
+\section{Europass}
+
+\begin{frame}
+\frametitle{Europass}
+\begin{figure}
+  \includegraphics[width=.35\columnwidth]{img/europass.png}
+\end{figure}
+Il Curriculum Vitae europeo, o Europass, è un formato introdotto a partire dal 2002 dalla Commissione Europea. È un \alert{modello standard} e permette una lettura rapida e chiara del CV per poterlo confrontare velocemente con altri.\pause
+
+~
+
+Il CV europeo ha una struttura semplice e lineare ed è diviso in sezioni con un \alert{layout a colonne}.
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Esempio di CV in formato europeo}
+\begin{figure}
+  \includegraphics[width=.9\columnwidth]{img/cveuromc.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vantaggi e svantaggi}
+Il Curriculum Vitae europeo è il formato ideale per chi sta valutando l'idea di cercare lavoro all'estero e per chi non ha molte esperienze di lavoro da illustrare.\pause
+
+~
+
+Se invece hai molte esperienze lavorative alle spalle o un importante percorso di formazione, l'Europass potrebbe non essere il modello più indicato da utilizzare, poiché mette a disposizione poco spazio.\pause
+
+~
+
+Ha inoltre lo svantaggio di non essere particolarmente ``interessante'', quindi se stiamo cercando lavori più creativi può essere utile anche creare un CV di un altro tipo.
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{CV europeo online}
+Dal sito \href{https://europass.europa.eu/it}{https://europass.europa.eu/it} è possibile seguire una \alert{procedura guidata} per la creazione del proprio curriculum europeo.
+
+~
+
+\begin{figure}
+  \includegraphics[width=.8\columnwidth]{img/cvonline.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Modelli online}
+Per crearlo sul nostro computer esistono dei \alert{template preimpostati} e modificabili che si trovano facilmente su Internet.\pause
+
+~
+
+Con una rapida ricerca su Google di ``modello cv europass'' troviamo:
+\begin{center}
+  \href{https://www.governo.it/sites/governo.it/files/cvformatoeuropeoB.doc}{www.governo.it/sites/governo.it/files/cvformatoeuropeoB.doc}
+\end{center}
+che scarichiamo e possiamo modificare con Word.
+\end{frame}
+
+\begin{frame}
+\frametitle{Template Europass modificabile}
+\begin{figure}
+  \includegraphics[width=\columnwidth]{img/cvtemplate.png}
+\end{figure}
+
+Il file scaricato è organizzato con delle \alert{caselle di testo}, che andremo a riempire coi nostri dati.
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Esercizi}
+\begin{enumerate}
+  \item Crea il tuo \alert{curriculum reale}, modificando il modello proposto in queste slides. Aggiungi anche la tua foto e i tuoi contatti. Salvalo in formato PDF, stampalo e firmalo.
+  
+  ~
+  \item Crea il curriculum di un \alert{personaggio immaginario} che si sta candidando per la posizione di manager di un supermercato molto grande in provincia di Milano. Salvalo in formato PDF.
+\end{enumerate}
+\end{frame}
+
+
+\section{Altri modelli}
+
+\begin{frame}
+\frametitle{Altri tipi di CV}
+Il tuo Cv potrebbe assumere anche le sembianze diverse dal tradizionale formato del Cv o del
+formato Europass: la creazione di un'infografica che contiene le informazioni del tuo profilo è un
+modo originale e immediato di presentarti alle aziende, soprattutto nell'epoca dei Social Network.
+Le Infografiche di Cv hanno il vantaggio di poter realizzare Cv creativi, chiari, diretti mettendo a
+disposizione di chi legge (in un unico foglio) le informazioni che vuoi comunicare e mettere in
+evidenza rispetto al posto per il quale ti stai candidando. I tuoi dati anagrafici, la tua formazione, le
+tue esperienze e competenze saranno tradotti in un formato grafico: si tratta infatti di una
+trasposizione grafica e visiva di informazioni. Potrai creare il tuo Cv infografico attraverso l'utilizzo di
+alcune piattaforme online che mettono a disposizione gratuitamente dei layout grafici a questo
+specifico scopo. Spesso questi siti traggono informazioni dai profili social degli utenti (ad esempio
+Linkedin). Su Canva è possibile trovare modelli di CV infografica
+  
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Canva}
+\begin{figure}
+  \includegraphics[width=.5\columnwidth]{img/cvinfografica.png}
+\end{figure}
+\end{frame}
+
+\section{Presentazione}
+
+
+% Ha lo scopo di indicare la ragione per cui si è inviato il curriculum vitae e deve evidenziare
+% brevemente (non deve superare la mezza pagina) i punti forti di chi scrive, invogliando il
+% selezionatore a leggere il curriculum vitae allegato. A seconda che si risponda ad un annuncio o ci si
+% autocandidi, deve essere impostata in modo diverso:
+% • Autocandidatura
+% Quando ci si autocandida, la lettera d'accompagnamento deve far comprendere al
+% selezionatore, con appropriato tatto, il tipo di lavoro che si gradirebbe ricoprire all’interno di
+% quella azienda, i motivi dell’interessamento per quella tipologia di mansione e soprattutto i
+% motivi per cui si potrebbe essere un utile collaboratore.
+% • Risposta annuncio
+% Nel caso di risposta ad un annuncio apparso su un quotidiano o su altri canali, il Curriculum
+% Vitae deve indicare perché si è interessati a quella mansione e le caratteristiche personali
+% utili a ricoprire il ruolo richiesto nell’annuncio.
+% Può risultare utile inviare il proprio curriculum vitae anche se non vi è perfetta coincidenza
+% tra quanto richiesto dall'azienda e le caratteristiche possedute: può darsi che l'azienda decida
+% comunque di valutare la possibilità di impegnare il candidato. È importante citare la fonte
+% tramite la quale si è venuti a conoscenza dell'opportunità.
+% Grafica della lettera di presentazione
+% La lettera di presentazione deve indicare: intestazione, luogo e data, destinatario, oggetto, testo e
+% firma. Può essere consigliabile scriverla a mano (se si ha una buona calligrafia) in quanto ciò
+% dimostrerebbe un interesse particolarmente sentito verso quell'azienda. In alternativa, si può
+% utilizzare il computer ricordando di riportare sempre un destinatario, in questo modo, infatti, non si
+% darà l’impressione che si stia mandando una quantità spropositata di curricula senza alcun interesse
+% specifico. In ogni caso, dopo i saluti, la firma dovrà essere riportata in originale. Relativamente al
+% destinatario, è opportuno che la lettera sia indirizzata ad una specifica persona: l'incaricato della
+% selezione, il direttore del personale o l'ufficio selezione del personale. È importante ricordare di
+% preparare un'intestazione, che può comparire anche a piè di pagina e che contenga tutti i recapiti
+% utili per essere contattati.
+
+
+\begin{frame}
+\frametitle{Cos'è Google Calendar}
+Google Calendar è l'\alert{agenda elettronica} della suite Google.\pause
+
+~
+
+\begin{columns}
+\begin{column}{.7\textwidth}
+  Permette di:
+  \begin{itemize}
+    \item gestire i propri appuntamenti;\pause
+    \item gestire gli appuntamenti di un gruppo di persone;\pause
+    \item programmare eventi ricorrenti;\pause
+    \item programmare videochiamate;\pause
+    \item creare eventi a cui invitare partecipanti esterni.
+  \end{itemize}  
+\end{column}
+\begin{column}{.2\textwidth}
+  \begin{figure}
+    \includegraphics[width=\columnwidth]{img/calendarlogo.png}
+  \end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+
+\section{Portfolio}
+
+\begin{frame}
+\frametitle{Cos'è un portfolio?}
+
+  
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Interfaccia principale}
+Creare un sito web come portfolio!!
+\end{frame}
+
+\end{document}

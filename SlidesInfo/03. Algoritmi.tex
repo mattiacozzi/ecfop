@@ -1,0 +1,578 @@
+\documentclass[]{beamer}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[italian]{babel}
+
+\title{Gli algoritmi e i programmi}
+\author{\texorpdfstring{Mattia Cozzi\newline\href{mailto:cozzimattia@gmail.com}{\texttt{cozzimattia@gmail.com}}}{Mattia Cozzi}}
+\date{a.s.~2023/2024}
+
+
+%\documentclass[handout]{beamer}     %usare questa classe per generare l'handout
+
+%\usepackage{pdfpages}   %per mostrare più quadri nella stessa pagina
+%\pgfpagesuselayout{4 on 1}[a4paper,border shrink=5mm,landscape]
+
+
+\usetheme{Singapore}
+%\useoutertheme[left]{sidebar} %elementi intorno alle diapositive
+\setbeamercovered{dynamic} %modifica l'aspetto del testo grigetto delle diapositive future. Argomenti: invisible/transparent/dynamic
+
+%COLORE PRINCIPALE
+\definecolor{verde}{RGB}{2, 194, 117} % UBC Blue (primary)
+\definecolor{viola}{RGB}{48, 0, 153} % UBC Blue (primary)
+\setbeamercolor{structure}{fg=verde} % itemize, enumerate, etc
+\setbeamercolor{alerted text}{fg=verde}
+
+\usecolortheme{orchid}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\tikzstyle{startstop} = [ellipse, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=viola!30,text=white]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=viola!30,text=white]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=viola!30,text=white]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, aspect=2, text centered, draw=black, fill=viola!30,text=white]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Contenuti}
+\tableofcontents
+\end{frame}
+
+\section{Problemi}
+
+
+
+\begin{frame}
+\frametitle{Modello del problema}
+Il modello del problema è una \alert<1>{rappresentazione schematica} di un particolare aspetto della realtà.\pause
+
+~
+
+Vengono individuate:
+\begin{itemize}
+  \item le entità, oggetti importanti ai fini della descrizione;\pause
+  \item le proprietà delle entità;\pause
+  \item le variabili;\pause
+  \item le costanti.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Dati e azioni}
+Distinguiamo:
+\begin{itemize}
+  \item \alert<1>{dati}; valori assunti dalle variabili o dalle costanti;\pause
+  \item \alert<2>{azioni}, attività sui dati che permettono di ottenere il risultato.\pause
+\end{itemize}
+
+~
+
+I dati possono essere \alert<3>{numerici, alfabetici o stringhe generiche}.\pause
+
+~
+
+Le azioni possono essere \alert<4>{di tipo aritmetico o logico}.
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Procedimenti per la risoluzione di un problema}
+\begin{enumerate}
+  \item Descrizione del problema:\pause
+  \begin{itemize}
+    \item individuazione dei dati di input;\pause
+    \item individuazione dei dati di output;\pause
+    \item individuazione delle risorse a disposizione.\pause
+  \end{itemize}
+  
+  ~
+  
+  \item Stesura dell'algoritmo:\pause
+  \begin{itemize}
+    \item scrittura con diagrammi;\pause
+    \item implementazione;\pause
+    \item controllo e debug.
+  \end{itemize}
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Definizione di algoritmo}
+Il termine viene dall'algebrista persiano del IX secolo \alert<1>{al-Khuwarizmi}.\pause
+
+~
+
+\begin{block}{Definizione}
+Un algoritmo è la descrizione di un insieme finito di istruzioni che devono essere eseguite per portare a termine un dato compito.
+\end{block}\pause
+
+~
+
+Esempi: istruzioni di montaggio di un mobile, ricetta di cucina, somme in colonna.\pause
+
+~
+
+Ogni algoritmo prevede la presenza di un \alert{esecutore}.
+\end{frame}
+
+
+
+\section{Pseudocodifica}
+
+\begin{frame}
+\frametitle{Pseudocodifica}
+È la descrizione di un algoritmo utilizzando il linguaggio comune secondo una serie di \alert<1>{regole rigorose} e un \alert<1>{vocabolario ristretto}.\pause
+
+~
+
+Caratteristiche:
+\begin{itemize}
+  \item Un algoritmo viene aperto e chiuso dalle parole \alert{\texttt{inizio}} e \alert{\texttt{fine}}.\pause
+  \item Operazioni di \emph{input}: \texttt{immetti}, \texttt{leggi}, \texttt{acquisisci}, \texttt{read}.
+  \item Operazioni di \emph{output}: \texttt{scrivi}, \texttt{mostra}, \texttt{comunica}, \texttt{write}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Operatori}
+Nel linguaggio di pseudocodifica possiamo utilizzare diversi operatori:
+\begin{itemize}
+  \item assegnazione di un valore ad una variabile:
+  \begin{center}
+  \texttt{assegna x = 9;}
+  
+  \texttt{calcola y = x + 3;}
+  \end{center}\pause
+  \item operatori matematici;\pause
+  \item operatori di confronto;\pause
+  \item operatori logici (\texttt{AND}, \texttt{OR}, \texttt{NOT}, \texttt{XOR}).
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Parole chiave}
+In pseudocodifica si usano alcune parole speciali che permettono di \alert{strutturare logicamente l'algoritmo}.
+
+~
+
+\begin{columns}
+\begin{column}{0.4\textwidth}
+\begin{itemize}
+  \item \texttt{se};
+  \item \texttt{allora};
+  \item \texttt{altrimenti};
+  \item \texttt{fine se};
+\end{itemize}
+\end{column}
+\begin{column}{0.4\textwidth}
+\begin{itemize}
+  \item \texttt{esegui};
+  \item \texttt{finché};
+  \item \texttt{mentre};
+  \item \texttt{ripeti}.
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Esempio 1}
+Algoritmo in pseudocodifica per il calcolo dell'area di un triangolo:
+
+~
+
+\texttt{inizio}\\
+~~~~\texttt{immetti base};\\
+~~~~\texttt{immetti altezza};\\
+~~~~\texttt{calcola area = .5 * base * altezza};\\
+~~~~\texttt{scrivi area}\\
+\texttt{fine}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Esempio 2}
+Algoritmo in pseudocodifica per salutare in base all'ora del giorno:
+
+~
+
+\texttt{inizio}\\
+~~~~\texttt{acquisisci ora};\\
+~~~~\texttt{se ora < 12:00:}\\
+~~~~\texttt{allora}\\
+~~~~~~~~\texttt{scrivi `Buongiorno'};\\
+~~~~\texttt{se ora < 18:00:}\\
+~~~~\texttt{allora}\\
+~~~~~~~~\texttt{scrivi `Buon pomeriggio'};\\
+~~~~\texttt{altrimenti:}\\
+~~~~~~~~\texttt{scrivi `Buonasera'};\\
+~~~~\texttt{fine se};\\
+\texttt{fine}
+\end{frame}
+
+
+\section{Diagrammi}
+
+\begin{frame}
+\frametitle{Diagrammi a blocchi (\emph{flowchart})}
+I diagrammi a blocchi permettono di \alert<1>{rappresentare graficamente l'algoritmo}.\pause
+
+~
+
+In questi schemi, blocchi di forme diverse hanno significati diversi.
+
+~
+
+\begin{figure}
+\begin{tikzpicture}[node distance=5cm]
+\node (start) [startstop] {Inizio};
+\node (stop) [startstop,right of=start] {Fine};
+\end{tikzpicture}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Tipi di blocchi}
+\begin{figure}
+\begin{tikzpicture}[node distance=3cm]
+\node (ela) [process] {Elaborazione};
+\node (in) [io,right of=ela,xshift=3cm] {Input/Output};
+\node (deci) [decision,below of=ela,xshift=3cm] {Decisione};
+\draw [arrow] (deci) -| node[anchor=south east] {no} (6,-4.5);
+\draw [arrow] (deci) -| node[anchor=south west] {sì} (.2,-4.5);
+\end{tikzpicture}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Esempio 1 a blocchi}
+\begin{figure}
+\begin{tikzpicture}[node distance=1.5cm,every node/.style={scale=0.7}]
+\node (start) [startstop] {Inizio};\pause
+\node (in1) [io,below of=start] {base};
+\node (in2) [io,below of=in1] {altezza};
+\draw [arrow] (start) -- (in1);
+\draw [arrow] (in1) -- (in2);\pause
+\node (ela) [process,below of=in2] {area = .5 * base * altezza};
+\draw [arrow] (in2) -- (ela);\pause
+\node (out1) [io,below of=ela] {area};
+\draw [arrow] (ela) -- (out1);\pause
+\node (end) [startstop,below of=out1] {Fine};
+\draw [arrow] (out1) -- (end);
+\end{tikzpicture}
+\end{figure}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Esempio 2 a blocchi}
+\begin{figure}
+\begin{tikzpicture}[node distance=1.5cm,every node/.style={scale=0.7}]
+\node (start) [startstop] {Inizio};
+\node (in1) [io,below of=start,yshift=-.15cm] {ora};
+\draw [arrow] (start) -- (in1);\pause
+\node (deci1) [decision,below of=in1,yshift=-.5cm] {ora < 12:00?};
+\draw [arrow] (in1) -- (deci1);\pause
+\node (out1) [io,below of=deci1,xshift=-4cm,yshift=-.5cm] {Buongiono};
+\draw [arrow] (deci1) -| node[anchor=south west] {sì} (out1);\pause
+\node (deci2) [decision,below of=deci1,xshift=4cm,yshift=-.5cm] {ora < 18:00?};
+\draw [arrow] (deci1) -| node[anchor=south east] {no} (deci2);\pause
+\node (out3) [io,below of=deci2,xshift=-4cm] {Buon pomeriggio};
+\draw [arrow] (deci2) -| node[anchor=south west] {sì} (out3);\pause
+\node (out2) [io,below of=deci2,xshift=4cm] {Buonasera};
+\draw [arrow] (deci2) -| node[anchor=south east] {no} (out2);\pause
+\node (end) [startstop,below of=out3,yshift=-.5cm] {Fine};
+\draw [arrow] (out1) |- (end);
+\draw [arrow] (out2) |- (end);
+\draw [arrow] (out3) -- (end);
+\end{tikzpicture}
+\end{figure}
+\end{frame}
+
+\section{Strutture}
+
+\begin{frame}
+\frametitle{Strutture di controllo}
+Le istruzioni di un algoritmo possono:
+\begin{itemize}
+  \item essere organizzate in \alert<1>{sequenza};\pause
+  \item presentare delle \alert<2>{alternative} (struttura condizionale);\pause
+  \item essere \alert<3>{ripetute} un certo numero di volte o finché si verifica una certa condizione (struttura iterativa).\pause
+\end{itemize}
+
+~
+
+Ogni algoritmo può essere scritto con una combinazione di queste tre strutture fondamentali.
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Sequenza}
+\begin{columns}
+\begin{column}{0.4\textwidth}
+\begin{center}
+Pseudocodifica
+
+~
+\end{center}
+\end{column}
+\begin{column}{0.4\textwidth}
+\begin{center}
+Blocchi
+
+~
+\end{center}
+\end{column}
+\end{columns}
+\begin{columns}
+\begin{column}{0.4\textwidth}
+\texttt{Istruzione 1}
+
+\texttt{Acquisizione 1}
+
+\texttt{Istruzione 2}
+\end{column}
+\begin{column}{0.4\textwidth}
+\begin{figure}
+\begin{tikzpicture}[node distance=1.5cm,every node/.style={scale=0.8}]
+\node (istr1) [process] {Istruzione 1};
+\node (istr2) [io,below of=istr1,yshift=-.5cm] {Acquisizione};
+\node (istr3) [process,below of=istr2,yshift=-.5cm] {Istruzione 2};
+\draw [arrow] (istr1) -- (istr2);
+\draw [arrow] (istr2) -- (istr3);
+\end{tikzpicture}
+\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Struttura condizionale}
+\begin{columns}
+\begin{column}{0.4\textwidth}
+\begin{center}
+Pseudocodifica
+
+~
+\end{center}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{center}
+Blocchi
+
+~
+\end{center}
+\end{column}
+\end{columns}
+\begin{columns}
+\begin{column}{0.4\textwidth}
+\texttt{se condizione}
+
+\texttt{allora}
+
+~~~~\texttt{istruzione 1}
+
+\texttt{altrimenti}
+
+~~~~\texttt{istruzione 2}
+
+\texttt{fine se}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{figure}
+\begin{tikzpicture}[node distance=1.5cm,every node/.style={scale=0.7}]
+\node (deci1) [decision] {Condizione?};
+\node (istr4) [process,below of=deci1,xshift=-2.5cm,yshift=-.5cm] {Istruzione 1};
+\node (istr5) [process,below of=deci1,xshift=2.5cm,yshift=-.5cm] {Istruzione 2};
+\draw [arrow] (deci1) -| node[anchor=south west] {sì} (istr4);
+\draw [arrow] (deci1) -| node[anchor=south east] {no} (istr5);
+\end{tikzpicture}
+\end{figure}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Iterazione}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{center}
+Pseudocodifica
+
+~
+\end{center}
+\end{column}
+\begin{column}{0.4\textwidth}
+\begin{center}
+Blocchi
+
+~
+\end{center}
+\end{column}
+\end{columns}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\texttt{esegui}
+
+~~~~\texttt{Istruzione 1}
+
+\texttt{ripeti mentre condizione}
+\end{column}
+\begin{column}{0.4\textwidth}
+\begin{figure}
+\begin{tikzpicture}[node distance=1.5cm,every node/.style={scale=0.8}]
+\node (istr5) [process,yshift=-3cm] {Istruzione 1};
+\node (deci2) [decision,below of=istr5,yshift=-.3cm] {Condizione?};
+\node (istr6) [process,below of=deci2,yshift=-.5cm] {Istruzione 2};
+\draw [arrow] (istr5) -- (deci2);
+\draw [arrow] (deci2) -- node[anchor=west] {no} (istr6);
+\draw [arrow] (deci2) -| node[anchor=north west] {sì}  ([xshift=-3cm,yshift=0cm]istr5.east) -- (istr5);
+\end{tikzpicture}
+\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+
+\section{Linguaggi}
+
+
+\begin{frame}
+\frametitle{Dai codici ai linguaggi}
+
+La scrittura binaria è molto comoda e semplice da gestire per una macchina (0 = circuito chiuso, 1 = circuito aperto).\pause
+
+~
+
+Un programma (ovvero un insieme di algoritmi) per poter essere eseguito da una macchina \alert<2>{deve essere scritto in linguaggio binario}.\pause
+
+~
+
+Intuiamo tuttavia che scrivere un programma in codice binario è molto complesso per un essere umano, ed è per questo motivo che sono stati inventati i \alert<3>{linguaggi di programmazione}.\pause
+
+~
+
+I linguaggi di programmazione permettono di scrivere algoritmi con un linguaggio più ``vicino'' a quello che parliamo.
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Linguaggi di programmazione}
+I LdP sono particolari \alert<1>{linguaggi artificiali} che vengono utilizzati nella comunicazione umano-computer.\pause
+
+~
+
+Le caratteristiche di un linguaggio di programmazione sono:
+\begin{itemize}
+  \item un vocabolario ristretto (si utilizzano poche parole semplici);\pause
+  \item regole di costruzione delle istruzioni molto semplici e rigide;\pause
+  \item l'utilizzo di strutture predeterminate (come quelle viste).\pause
+\end{itemize}
+
+~
+
+Esempi di linguaggi di programmazione tra i circa 2500 esistenti: Fortran (1957), Pascal (1970), C++ (1986), Python (1991), JavaScript (1995, usato nel 98\% dei siti web).
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Linguaggi di basso livello}
+Il \alert<1>{linguaggio macchina} è quello direttamente compreso e utilizzato dalla CPU ed è formato solo da 0 e 1.\pause
+
+~
+
+Un linguaggio di \alert<2>{basso livello} è più semplice del linguaggio macchina, ma è comunque molto lontano dai linguaggi che usiamo oggi per programmare, perché è difficile da comprendere per un umano.\pause
+
+~
+
+Un esempio di linguaggio di basso livello è \alert<3>{assembly}, che usa istruzioni come:
+
+~
+
+\begin{quote}
+  \texttt{05 id	ADD EAX, imm32}
+\end{quote}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Linguaggi di alto livello}
+I linguaggi di alto livello utilizzano un linguaggio pseudo-umano, che rende più facile la scrittura e la verifica del corretto funzionamento.\pause
+
+~
+
+I linguaggi di programmazione di alto livello utilizzano come base la lingua inglese.\pause
+
+~
+
+Esempio di istruzione in C++:
+
+~
+
+\begin{quote}
+  \texttt{int num1, num2, differenza;}
+
+  \texttt{cout << "Due numeri: ";}
+
+  \texttt{cin >> num1 >> num2;}
+
+  \texttt{differenza = num1 - num2;}
+  
+  \texttt{cout << "Risultato = " << differenza << endl;}
+\end{quote}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Traduzione in linguaggio macchina}
+La macchina non può eseguire direttamente le istruzioni scritte in un linguaggio di alto livello.\pause
+
+~
+
+È dunque necessario un ``interprete'' che traduca il \alert<2>{programma sorgente} (in linguaggio di alto livello) in istruzioni di macchina.\pause
+
+~
+
+La traduzione contemporanea all'esecuzione del sorgente è spesso piuttosto lenta, e pertanto si utilizzano dei \alert<3>{compilatori}.
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Compilatori e interpreti}
+Il compilatore è un programma (scritto in linguaggio macchina) in grado di leggere le istruzioni del sorgente, verificarne la correttezza linguistica e \alert<1>{sviluppare automaticamente le corrispondenti istruzioni in codice macchina}.\pause
+
+~
+
+Il codice ottenuto, che la macchina può eseguire direttamente, è detto \alert<2>{eseguibile} o \alert<2>{programma oggetto}.\pause
+  
+~
+
+Non tutti i linguaggi richiedono la compilazione: alcuni, come JavaScript, possono essere eseguiti con traduzione simultanea. Sono detti \alert<3>{linguaggi interpretati}.
+\end{frame}
+\end{document}
