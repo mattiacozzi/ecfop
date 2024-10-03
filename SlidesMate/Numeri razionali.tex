@@ -463,6 +463,35 @@ Esempio:\[24 = 2^3 \cdot \alert<4->{3} \qquad\qquad 36 = \alert<4->{2^2} \cdot 3
 \[ MCD(24, 36) = \alert<4->{2^2} \cdot \alert<4->{3} \]
 \end{frame}
 
+
+
+
+
+
+
+\begin{frame}
+  \frametitle{Esercizi sull'MCD}
+  \begin{enumerate}
+    \item Calcola il Massimo Comun Divisore fra i seguenti gruppi di numeri.
+    \begin{multicols}{2}
+      \begin{itemize}
+          \item $ 18, 96 $
+          \item $ 9, 108 $
+          \item $ 26, 64 $
+          \item $ 3, 7, 9 $
+          \item $ 14, 35, 21 $
+          \item $ 36, 108, 117 $
+      \end{itemize}
+    \end{multicols}
+  \end{enumerate}
+  \end{frame}
+  
+  
+
+
+
+
+
 \begin{frame}
 \frametitle{Minimo comune multiplo (mcm)}
 Il minimo comune multiplo (indicato con mcm) tra due numeri è \alert{il più piccolo tra i multipli comuni tra due numeri} diverso da zero.\pause
@@ -503,6 +532,30 @@ Esempio:\[24 = \alert<4->{2^3} \cdot \alert<4->{3} \qquad\qquad 28 = 2^2 \cdot \
 \[ mcm(24, 28) = \alert<4->{2^3} \cdot \alert<4->{3} \cdot \alert<4->{7} \]
 \end{frame}
 
+
+
+
+\begin{frame}
+\frametitle{Esercizi sull'mcm}
+\begin{enumerate}
+    \item Calcola il minimo comune multiplo fra i seguenti gruppi di numeri.
+    \begin{multicols}{2}
+      \begin{itemize}
+          \item $ 18, 96 $
+          \item $ 9, 108 $
+          \item $ 26, 64 $
+          \item $ 3, 7, 9 $
+          \item $ 14, 35, 21 $
+          \item $ 36, 108, 117 $
+      \end{itemize}
+    \end{multicols}
+    \item In un campanile ci sono tre campane. Una batte un rintocco ogni 5 secondi, la seconda un rintocco ogni 6 secondi, la terza batte un rintocco ogni 8 secondi. Se battono insieme il primo rintocco, dopo quanti secondi ne batteranno un altro insieme?
+\end{enumerate}
+\end{frame}
+  
+
+
+
 \section{Frazioni}
 
 \begin{frame}
@@ -523,8 +576,23 @@ Ad esempio:
 \end{center}\pause
 
 Le frazioni sono solo un modo più comodo di scrivere delle divisioni!
-
 \end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{L'insieme $ \mathbb{Q} $}
+Le frazioni, cioè i numeri decimali (finiti oppure periodici), costituiscono l'insieme $ \mathbb{Q} $, cioè l'insieme dei \alert{numeri razionali} (\emph{ratio} in latino significa ``rapporto'', cioè divisione.)
+  
+\begin{figure}
+  \includegraphics[width=.65\columnwidth]{img/rettaq.png}
+\end{figure}\pause
+
+Stiamo riempiendo lo spazio tra un numero e l'altro che c'era in $ \mathbb{Z} $.
+\end{frame}
+
+
 
 
 \begin{frame}
@@ -543,7 +611,7 @@ Le frazioni sono solo un modo più comodo di scrivere delle divisioni!
     \node[below,blue] at (3.8,.4) {interi};
     \node[] at (2.5,1.3) {$ -6 $};
     \node[] at (1,-1.8) {$ -1 $};
-    \node[] at (1,1.8) {$ 100 $};
+    \node[] at (1,1.8) {$ -100 $};
     \draw[thick, red] (1.2,0) ellipse (5cm and 3.5cm);
     \node[red] at (5.4,.4) {$ \mathbb{Q} $};
     \node[below,red] at (5.4,.4) {razionali};
@@ -556,41 +624,284 @@ Le frazioni sono solo un modo più comodo di scrivere delle divisioni!
 
 
 
+
 \begin{frame}
-\frametitle{Numeri naturali}
-I numeri naturali sono i numeri più semplici e i primi che si imparano.\pause
+\frametitle{Cosa resta fuori}
+L'insieme $ \mathbb{Q} $ non esaurisce l'insieme dei numeri che si usano in matematica.\pause
 
 ~
 
-\alert{I numeri naturali vengono utilizzati per contare} in generale, ad esempio per indicare quante foglie ha una pianta o quante caramelle ci sono in un vaso.
+La sua estensione è l'insieme $ \mathbb{R} $ dei \alert{numeri reali}.\pause
 
 ~
 
-\visible<2->{\begin{columns}
-  \begin{column}{0.4\textwidth}
-  \begin{figure}
-    \includegraphics[width=.8\columnwidth]{img/pianta.jpg}
+$ \mathbb{R} $ contiene numeri decimali non periodici, cioè con un numero infinito di cifre casuali dopo la virgola, che non si ripetono mai.\pause
 
-    5 foglie
-  \end{figure}    
-  \end{column}
-  \begin{column}{0.4\textwidth}
-    \begin{figure}
-      \includegraphics[width=.8\columnwidth]{img/caramelle.jpg}
+~
 
-      42 caramelle
-    \end{figure} 
-  \end{column}
-\end{columns}}
+Qualche esempio di numero reale ma non razionale:
+\begin{center}
+  $ \pi = 3,141592653589\ldots $
+
+  ~
+
+  $ \sqrt{2} = 1,4142135623730\ldots $
+\end{center}
 \end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Insiemi numerici}
+\begin{figure}
+  \begin{tikzpicture}[scale=.8]
+    \draw[thick, purple] (0,0) ellipse (3cm and 1.5cm);
+    \node[purple] at (2,.4) {$ \mathbb{N} $};
+    \node[] at (-2,0) {$ 2 $};
+    \node[] at (0,1) {$ 10 $};
+    \node[] at (1,-1) {$ 135 $};
+    \draw[thick, blue] (.6,0) ellipse (4cm and 2.5cm);
+    \node[blue] at (3.8,.4) {$ \mathbb{Z} $};
+    \node[] at (2.5,1.3) {$ -6 $};
+    \node[] at (1,-1.8) {$ -1 $};
+    \node[] at (1,1.8) {$ -100 $};
+    \draw[thick, red] (1.2,0) ellipse (5cm and 3.5cm);
+    \node[red] at (5.4,.4) {$ \mathbb{Q} $};
+    \node[] at (4.5,1.7) {$ \dfrac{2}{3} $};
+    \node[] at (4.5,-1.7) {$ -\dfrac{23}{10} $};
+    \node[] at (3,-2.7) {$ \dfrac{16}{7} $};
+    \draw[thick, orange] (1.8,0) ellipse (6cm and 4.5cm);
+    \node[orange] at (7.1,.4) {$ \mathbb{R} $};
+    \node[] at (6.5,1.7) {$ \pi $};
+    \node[] at (6.5,-1.7) {$ \sqrt{2} $};
+    \node[] at (4,-3.7) {$ \sqrt{3} $};
+\end{tikzpicture}
+\end{figure}
+\end{frame}
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Terminologia}
+Essendo le frazioni delle divisioni, possiamo introdurre dei nuovi termini:
+
+~
+
+\begin{itemize}
+  \item il \alert{numeratore} è ``il numero sopra'', cioè il dividendo;\pause
+  
+  ~
+  \item il \alert{denominatore} è il ``numero sotto'', cioè il divisore.\pause
+\end{itemize}
+
+~
+
+~
+\[\frac{15}{7}\]\pause
+15 è il numeratore, 7 è il denominatore.
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Il valore di una frazione}
+A volte, per capire bene il valore di un numero razionale (una frazione) è utile \alert{eseguire la divisione tra i due numeri}:
+\[\frac{3}{8}=0,375\]\pause
+
+Alcune frazioni, anche se in apparenza diverse, hanno in realtà \alert{lo stesso valore}:
+\[\frac{3}{8}=\frac{9}{24}\]\pause
+Quando due frazioni hanno lo stesso valore, si dicono \alert{frazioni equivalenti}.
+  
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Minimi termini}
+Per trovare la frazione \alert{più semplice} equivalente ad una certa frazione, si ricorre alla \alert{semplificazione}.\pause
+
+~
+
+Quando una frazione è espressa nella sua forma più semplice, si dice che è \alert{ridotta ai minimi termini}.
+
+\begin{center}
+  $ \dfrac{9}{24} $ \alert{non} è ridotta ai minimi termini
+
+
+  ~
+
+  ~
+
+  $ \dfrac{3}{8} $ è ridotta ai minimi termini
+\end{center}\pause
+
+~
+
+Per eseguire la semplificazione, è importantissimo essere abili nella \alert{scomposizione in fattori primi}.
+\end{frame}
+
+\begin{frame}
+\frametitle{Semplificazione}
+Possiamo semplificare una frazione \alert{dividendo numeratore e denominatore} per un fattore comune (il migliore è l'mcm, ma possiamo anche procedere per passi).\pause
+
+~
+
+Esempi:
+\[ \frac{16}{10}\pause = \frac{8 \cdot 2}{5 \cdot 2}\pause = \frac{8 \cdot \cancel{2}}{5 \cdot \cancel{2}}\pause = \frac{8}{5} \]\pause
+
+\[ \frac{14}{21}\pause = \frac{7 \cdot 2}{7 \cdot 3}\pause = \frac{\cancel{7}\cdot 2}{\cancel{7} \cdot 3}\pause = \frac{2}{3} \]
+\end{frame}
+
+
+
+
+\begin{frame}
+  \frametitle{Esercizi sulla semplificazione delle frazioni}
+  \begin{enumerate}
+    \item Riduci ai minimi termini le seguenti frazioni:
+    \begin{multicols}{2}
+      \begin{itemize}
+          \item $ \dfrac{4}{8} $
+          
+          ~
+
+          ~
+          \item $ \dfrac{10}{15} $
+          
+          ~
+
+          ~
+          \item $ \dfrac{100}{200} $
+          \item $ \dfrac{16}{24} $
+          
+          ~
+
+          ~
+          \item $ \dfrac{2000}{3000} $
+          
+          ~
+
+          ~
+          \item $ \dfrac{8}{4} $
+      \end{itemize}
+    \end{multicols}
+  \end{enumerate}
+  \end{frame}
+  
+
+
+\begin{frame}
+\frametitle{Rappresentare una frazione}
+Per eseguire i calcoli con le frazioni, è molto utile \alert{immaginarle}, cioè vederle con l'immaginazione:
+
+~
+\begin{figure}
+  \includegraphics[width=.5\columnwidth]{img/fraz.png}
+\end{figure}
+
+La frazione rappresentata significa ``sette parti su otto'' (quindi meno di un intero, cioè 1).\pause
+
+~
+
+Prova a rappresentare $ \dfrac{7}{4} $. \pause
+
+~
+
+Cosa succede se il numeratore è maggiore del denominatore?
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Frazioni proprie, improprie e apparenti}
+\begin{itemize}
+  \item \alert{Frazioni proprie}, in cui il numeratore è più piccolo del denominatore (valgono quindi \alert{meno di 1});
+  \[\frac{2}{3}=0,666\ldots\qquad\qquad\qquad\frac{99}{100}=0,99\]\pause
+  \item \alert{frazioni apparenti}, in cui il numeratore è un multiplo del denominatore (equivalgono quindi a \alert{un numero intero});
+  \[\frac{10}{5}=\frac{2}{1}=2\qquad\qquad\qquad\frac{40}{4}=\frac{10}{1}=10\]\pause
+  \item \alert{frazioni improprie}, in cui il numeratore è un più grande del denominatore (valgono quindi \alert{più di 1});
+  \[\frac{11}{5}=2,2\qquad\qquad\qquad\frac{13}{8}=1,625\]
+\end{itemize}
+  
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Esercizi sulla rappresentazione delle frazioni}
+  \begin{enumerate}
+    \item Rappresenta le seguenti frazioni (se necessario, semplificale prima di disegnarle):
+    \begin{multicols}{2}
+      \begin{itemize}
+          \item $ \dfrac{2}{5} $
+          
+          ~
+
+          ~
+          \item $ \dfrac{1}{9} $
+          
+          ~
+
+          ~
+          \item $ \dfrac{6}{12} $
+          \item $ \dfrac{6}{5} $
+          
+          ~
+
+          ~
+          \item $ \dfrac{9}{3} $
+          
+          ~
+
+          ~
+          \item $ \dfrac{38}{19} $
+      \end{itemize}
+    \end{multicols}
+    \item Scrivi 6 frazioni (2 proprie, 2 improprie e 2 apparenti) e rappresentale.
+  \end{enumerate}
+  \end{frame}
+  
+
+
+
 
 \section{Operazioni}
 
 
 \begin{frame}
 \frametitle{Frazioni ``compatibili''}
+È molto facile eseguire la somma/differenza di frazioni quando queste hanno \alert{lo stesso denominatore}: basta sommare/sottrarre i numeratori:
 
+~
+
+\begin{figure}
+  \includegraphics[width=.4\columnwidth]{img/sommafraz.png}
+\end{figure}
 \end{frame}
+
+
+\begin{frame}
+\frametitle{Esempi}
+\[ \frac{3}{4} + \frac{7}{4} \pause= \frac{3+7}{4}\pause = \frac{10}{4}\pause = \frac{5}{2}  \]\pause
+
+~
+
+\[ \frac{7}{8} - \frac{5}{8} \pause= \frac{7-5}{8}\pause = \frac{2}{8}\pause = \frac{1}{4}  \]\pause
+
+~
+
+Come si esegue invece questo calcolo?
+\[ \frac{2}{7} + \frac{3}{4} \]
+\end{frame}
+
+
 
 \section{Proporzioni}
 
@@ -600,3 +911,4 @@ I numeri naturali sono i numeri più semplici e i primi che si imparano.\pause
 
 
 \end{document}
+r
