@@ -457,6 +457,8 @@ Servono a contare il numero di celle in un intervallo che contengono qualcosa.
 
 
 RIFERIMENTO RELATIVO vid 14
+Si definisce riferimento relativo un riferimento che cambia durante le operazioni di copia formula.
+
 Un riferimento (o referenza) relativa è il riferimento ad una cella in funzione di una certa altra cella.
 
 Esempio: la cella che sta cinque colonne a sinistra della cella attuale.
