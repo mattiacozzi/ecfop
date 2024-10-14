@@ -1,0 +1,171 @@
+\documentclass[12pt]{exam}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[italian]{babel}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\def\angolo[#1](#2)(#3:#4:#5)% Syntax: [draw options] (center) (initial angle:final angle:radius)
+    { \draw[#1] ($(#2)+({#5*cos(#3)},{#5*sin(#3)})$) arc (#3:#4:#5); }
+
+\newcommand{\class}{Materia Classe Indirizzo}     %Fisica 5 LS
+\newcommand{\examnum}{Verifica num}               %Verifica 2
+\newcommand{\examdate}{Data}                      %29/10/2018
+\newcommand{\timelimit}{Durata}                   %2 ore
+\newcommand{\topic}{Argomenti}                    %Campo elettrico e campo magnetico
+
+\pagestyle{head}
+\firstpageheader{\class}{\examnum\ - Pagina \thepage\ di \numpages}{\examdate}
+\runningheader{\class}{\examnum\ - Pagina \thepage\ di \numpages}{\examdate}
+\runningheadrule
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} r}
+ \textbf{\topic} && \textbf{Durata: \timelimit}\\
+ &&\\
+ \textbf{Nome:} \makebox[2.9in]{\hrulefill} && \\
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+
+% Punteggio totale: \numpoints.
+\begin{center}
+\addpoints
+% \gradetable[v][questions]
+\multirowgradetable{1}[questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+
+%DOMANDA SECCA
+\question[1] Calculate 2+2.
+\addpoints
+
+
+
+%DOMANDA DIVISA IN PIÙ RICHIESTE INDICATE CON (a), (b)...
+\question[20] Consider the function $f(x)=3x^3+2x^2+x+1$.
+\noaddpoints % to omit double points count
+\begin{parts}
+\part[10] Calculate $f'(x)$.
+\part[10] Calculate $f''(x)$.
+\end{parts}
+\addpoints
+
+
+%RISPOSTA MULTIPLA, CON LETTERE IN ELENCO
+\question[2] One of these things is not like the others; one of these
+things is not the same. Which one is different?
+\begin{choices}
+\choice John
+\choice Paul
+\choice George
+\choice Ringo
+\choice Socrates
+\end{choices}
+
+
+%RISPOSTA MULTIPLA, CON LETTERE SUBITO DOPO LA DOMANDA. BRUTTO
+\question[2] One of these things is not like the others; one of these
+things is not the same. Which one is different?
+\begin{oneparchoices}
+\choice John
+\choice Paul
+\choice George
+\choice Ringo
+\choice Socrates
+\end{oneparchoices}
+
+
+
+%RISPOSTA MULTIPLA, CON PALLINI
+\question[3] Mark box if true.
+\addpoints
+\begin{checkboxes}
+\choice 2+2=4
+\choice $\frac{d}{dx} (x^2+1) = 2x+1$
+\choice The Moon is made of cheese.
+\end{checkboxes}
+
+
+
+%RISPOSTA MULTIPLA CON BOXES O ALTRO
+{%
+\checkboxchar{$\Box$} % changing checkbox style locally
+\question[3] Mark box if true.
+\addpoints
+\begin{checkboxes}
+\choice 2+2=4
+\choice $\frac{d}{dx} (x^2+1) = 2x+1$
+\choice The Moon is made of cheese.
+\end{checkboxes}
+}%
+
+
+
+%RISPOSTA MULTIPLA INDICATA CON LETTERE, SU DUE COLONNE
+{%
+% changing choice items style locally
+\renewcommand*\thechoice{\arabic{choice}} 
+\renewcommand*\choicelabel{\thechoice)}
+%
+\question[2] Element with $Z=92$ is:
+\begin{multicols}{2}
+\begin{choices}
+\choice H
+\choice O
+\choice F
+\choice S
+\choice Ba
+\choice Pb
+\choice U
+\choice Pu
+\end{choices}
+\end{multicols}
+}%
+
+
+
+
+%RISPOSTA LIBERA CON BOX VUOTO
+\question[10]
+In no more than one paragraph, explain why the earth is round.
+\makeemptybox{2in}
+
+
+\question[20]
+Explain blah, blah\ldots
+\makeemptybox{\fill}
+
+\newpage
+
+
+
+%RISPOSTA LIBERA CON LINEE FINO A FINE PAGINA
+\question[20]
+Explain blah, blah\ldots
+\fillwithlines{\fill}
+
+\newpage
+
+
+
+%RISPOSTA LIBERA CON TOT RIGHE DI PUNTINI
+\question[20]
+Explain blah, blah\ldots
+\fillwithdottedlines{8em}
+
+\end{questions}
+
+\end{document}
