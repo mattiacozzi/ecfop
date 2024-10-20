@@ -7,7 +7,7 @@
 \usepackage{cancel}
 \usepackage{multicol}
 
-\title{I numeri: naturali, interi, decimali}
+\title{La misurazione}
 \author{Mattia Cozzi}
 \date{a.f.~2024/2025}
 %\documentclass[handout]{beamer}     %usare questa classe per generare l'handout
@@ -18,9 +18,6 @@
 \setbeamercovered{dynamic} %modifica l'aspetto del testo grigetto delle diapositive future. Argomenti: invisible/transparent/dynamic
 
 \usecolortheme{orchid}
-
-
-
 
 
 \theoremstyle{plain}
@@ -55,959 +52,861 @@
 \end{frame}
 
 
-\section{Numeri naturali}
+\section{Premessa}
+
+
 
 
 \begin{frame}
-\frametitle{Numeri naturali}
-I numeri naturali sono i numeri più semplici e i primi che si imparano.\pause
+\frametitle{A cosa serve la matematica nel mondo?}
+\begin{quote}
+  La filosofia è scritta in questo grandissimo libro che continuamente ci sta aperto innanzi a gli occhi (io dico l'universo), ma \alert<1>{non si può intendere se prima non s'impara a intender la lingua, e conoscer i caratteri, ne' quali è scritto}.\pause
+  
+  ~
 
-~
+  \alert<2>{Egli è scritto in lingua matematica}, e i caratteri son triangoli, cerchi, ed altre figure geometriche, senza i quali mezzi è impossibile a intenderne umanamente parola; senza questi è un aggirarsi vanamente per un oscuro laberinto.
+  \begin{flushright}
+    Galileo Galilei, \emph{Il Saggiatore}, 1623 
+  \end{flushright}
+\end{quote}
+\end{frame}
 
-\alert{I numeri naturali vengono utilizzati per contare} in generale, ad esempio per indicare quante foglie ha una pianta o quante caramelle ci sono in un vaso.
 
-~
 
-\visible<2->{\begin{columns}
-  \begin{column}{0.4\textwidth}
+
+\begin{frame}
+\frametitle{Parti dell'unità}
+Ci sono alcuni \alert{numeri decimali speciali}:
+
+\[ 0,1 \qquad \qquad 0,01 \qquad \qquad 0,001 \]\pause
+
+Questi numeri indicano:
+\begin{itemize}
+  \item la \alert{decima parte} dell'unità (1 parte su 10);\pause
+  \item la \alert{centesima parte} dell'unità (1 parte su 100);\pause
+  \item la \alert{millesima parte} dell'unità (1 parte su 1000);
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Decimi}
+\begin{columns}
+  \begin{column}{0.3\textwidth}
   \begin{figure}
-    \includegraphics[width=.8\columnwidth]{img/pianta.jpg}
-
-    5 foglie
+    \includegraphics[width=\columnwidth]{img/decimi1.png}
   \end{figure}    
   \end{column}
-  \begin{column}{0.4\textwidth}
-    \begin{figure}
-      \includegraphics[width=.8\columnwidth]{img/caramelle.jpg}
+  \begin{column}{0.6\textwidth}
+    Dalla figura, possiamo capire che \alert{dieci decimi sono un'unità}.
 
-      42 caramelle
-    \end{figure} 
+    ~
   \end{column}
-\end{columns}}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{L'insieme $ \mathbb{N} $}
-I numeri naturali corrispondono quindi all'insieme:
-\[ \mathbb{N} = \{ 0, 1, 2, 3, 4, 5, \ldots \}\]\pause
-
+\end{columns}
 \begin{figure}
-  \begin{tikzpicture}
-    \draw[thick, purple] (0,0) ellipse (3cm and 1.5cm);
-    \node[purple] at (2,.4) {$ \mathbb{N} $};
-    \node[below,purple] at (2,.4) {naturali};
-    \node[] at (-2,0) {$ 2 $};
-    \node[] at (0,1) {$ 10 $};
-    \node[] at (1,-1) {$ 135 $};
-    \node[] at (-.5,-1) {$ 0 $};
-    \node[] at (0,0) {$ \ldots $};
-\end{tikzpicture}
-\end{figure}\pause
-
-~
-
-Attenzione: lo zero è un numero naturale!
-\end{frame}
-
-\begin{frame}
-\frametitle{Visualizzazione dei naturali}
-I numeri naturali possono essere visualizzati/immaginati come punti su una \alert{semiretta}.
-
-~
-
-\begin{figure}
-  \includegraphics[width=.8\columnwidth]{img/naturali.png}
-\end{figure}\pause
-
-~
-
-Immaginare i numeri (non solo i naturali) come punti sulla retta è fondamentale per capirli per davvero!
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Precedente e successivo}
-\begin{figure}
-  \includegraphics[width=.6\columnwidth]{img/naturali.png}
+  \includegraphics[width=.8\columnwidth]{img/decimi2.png}
 \end{figure}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Centesimi}
+\begin{columns}
+  \begin{column}{0.3\textwidth}
+  \begin{figure}
+    \includegraphics[width=\columnwidth]{img/centesimi1.png}
+  \end{figure}    
+  \end{column}
+  \begin{column}{0.6\textwidth}
+    Dalla figura, possiamo capire che \alert{cento centesimi sono un'unità}.
+
+    ~
+  \end{column}
+\end{columns}
+\begin{figure}
+  \includegraphics[width=.8\columnwidth]{img/centesimi2.png}
+\end{figure}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Millesimi}
+\begin{figure}
+  \includegraphics[width=.6\columnwidth]{img/millesimi1.png}
+\end{figure}    
+
+Dalla figura, possiamo capire che \alert{mille millesimi sono un'unità}.
+\end{frame}
+
+
+
+\section{Misura}
+
+
+\begin{frame}
+\frametitle{Perché misuriamo?}
+L'operazione di misura è il confronto tra una quantità e una certa \alert{unità di misura}.\pause
 
 ~
 
-Tutti i naturali, tranne lo zero, hanno un:
+È fondamentale misurare per:
 \begin{itemize}
-  \item \alert{precedente}, cioè il numero immediatamente a sinistra sulla linea dei naturali;\pause
-  \item \alert{successivo/conseguente}, cioè il numero immediatamente a destra sulla linea dei naturali;\pause
-\end{itemize}
-
-~
-
-Lo zero ha solo il successivo, non ha il precedente.
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Confronto tra naturali}
-L'insieme dei naturali è \alert{ordinato}, cioè alcuni numeri vengono prima (sono più piccoli) e altri vengono dopo (sono più grandi).\pause
-
-~
-
-\alert{Confrontare due naturali} significa stabilire se sono uguali e, se non lo sono, quale dei due è il più grande.\pause
-
-~
-
-I simboli utilizzati sono: 
-\begin{itemize}
-  \item $ = $ (uguale a);
-  \item $ < $ (minore di);
-  \item $ > $ (maggiore di).
-\end{itemize}  
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Esempi}
-\begin{figure}
-  \includegraphics[width=.6\columnwidth]{img/naturali.png}
-\end{figure}
-
-\[ 5 = 5 \]\pause
-\[ 5 < 7 \]\pause
-\[ 5 > 4 \]\pause
-\end{frame}
-
-\section{Operazioni}
-
-\begin{frame}
-\frametitle{Somma o addizione}
-La somma (simbolo $ + $) si esegue tra due numeri, partendo dal primo e contando verso destra tante unità quante sono nel secondo numero.
-
-~
-\begin{figure}
-  \includegraphics[width=.8\columnwidth]{img/somma.png}
-\end{figure}
-
-~
-
-Per svolgere facilmente le somme, è sempre comodo \alert{visualizzarle}.
-\end{frame}
-
-\begin{frame}
-\frametitle{Terminologia}
-È utile imparare anche i termini corretti per indicare ciò di cui stiamo parlando:
-
-~
-
-\begin{figure}
-  \includegraphics[width=.5\columnwidth]{img/somma2.png}
-\end{figure}
-
-~
-
-Addendo significa ``cosa da sommare''.
-\end{frame}
-
-\begin{frame}
-\frametitle{Proprietà della somma}
-L'addizione è:
-\begin{itemize}
-  \item \alert{commutativa}, invertendo l'ordine degli addendi la somma non cambia:\[3+7=7+3\]\pause
-  \item \alert{associativa}, la somma di tre o più addendi non cambia se al posto di alcuni di essi si sostituisce la loro somma:\[(4+7)+3=4+(7+3)\]\pause
-  \item \alert{dissociativa}, la somma non cambia se un addendo viene sostituito con due addendi la cui somma è uguale a quello sostituito:\[7+ 13 = 7+ (3+10)\]
+  \item poter \alert{confrontare} due quantità, cioè stabilire quale è la più grande;\pause
+  \item poter \alert{comunicare} ad altre persone informazioni sulle quantità.
 \end{itemize}
 \end{frame}
 
-\begin{frame}
-\frametitle{Differenza o sottrazione}
-La differenza (simbolo $ - $) si esegue tra due numeri, partendo dal primo e contando verso sinistra tante unità quante sono nel secondo numero.
-
-~
-
-\begin{figure}
-  \includegraphics[width=.4\columnwidth]{img/differenza2.png}
-
-  ~
-
-  \includegraphics[width=.6\columnwidth]{img/differenza.png}
-\end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{Un problema}
-Se il minuendo è più piccolo del sottraendo, come in:\[7-12\]la differenza non può essere calcolata restando nell'insieme dei numeri naturali.
-
-~
-
-Vedremo che, per svolgere operazioni di questo tipo, è necessario un insieme di numeri diverso, l'insieme dei numeri interi $ \mathbb{Z} $.
-\end{frame}
 
 
 \begin{frame}
-\frametitle{Prodotto o moltiplicazione}
-Il prodotto (simbolo $ \times $ oppure $ \cdot $) si esegue tra due numeri, sommando il primo a sé stesso tante volte quante sono le unità del secondo numero.
-
-~
-
-\begin{figure}
-  \includegraphics[width=.8\columnwidth]{img/prodotto2.png}
-
-  ~
-
-  \includegraphics[width=.3\columnwidth]{img/prodotto.png}
-\end{figure}\pause
-
-Attenzione: il prodotto è commutativo, associativo e dissociativo!
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Proprietà distributiva}
-Il prodotto ha un'altra utile proprietà, è distributivo rispetto alla somma e alla differenza. 
-
-~
-
-Ad esempio:
-
-~
-
-\[ 5 \cdot (\textcolor{blue}{3}\textcolor{orange}{+}\textcolor{red}{6}) = (5 \cdot \textcolor{blue}{3}) \textcolor{orange}{+} (5 \cdot \textcolor{red}{6})\]\pause
-
-~
-
-\[ 5 \cdot (\textcolor{blue}{7}\textcolor{orange}{-}\textcolor{red}{4}) = (5 \cdot \textcolor{blue}{7}) \textcolor{orange}{-} (5 \cdot \textcolor{red}{4})\]
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Quoziente o divisione}
-Il quoziente (simbolo $ : $) si esegue tra due numeri. Si raggruppano le unità del primo in tanti gruppi uguali quante sono le unità del secondo e si contano le unità di un singolo gruppo.
-
-~
-
-\begin{figure}
-  \includegraphics[width=.4\columnwidth]{img/divisione.png}
-\end{figure}\pause
-
-Perché non è possibile dividere per zero?
-\end{frame}
-
-\begin{frame}
-\frametitle{Divisione con e senza resto}
-Se la divisione può essere eseguita perfettamente (come $ 7:2 $), allora ci sono due possibilità:
+\frametitle{Cosa misuriamo?}
+Si possono misurare moltissime cose, come ad esempio:
 \begin{itemize}
-  \item si utilizza la divisione con il resto;\pause
-  \item si utilizzano i numeri con la virgola (numeri decimali).
+  \item l'altezza di una stanza ($  3,10 \, m $);
+  \item la massa di una mela ($ 0,12  \, kg $);
+  \item la durata di una partita ($  5400 \, s $);
+  \item la velocità di un download ($  1024 \, kB/s $);
+  \item lo spessore di un capello ($  0,00008 \, m $);
+  \item la corrente che passa in un computer ($  1,5 \, A $);
+  \item l'energia utilizzata da un phon ($ 3600  \, kJ $);
+  \item la luminosità di una lampadina ($  2700 \, lumen $);
+  \item la dimensione del baule di un'auto ($  235 \, L $);
+  \item ecc.
 \end{itemize}
 \end{frame}
 
-\section{Potenze}
 
 \begin{frame}
-\frametitle{Elevamento a potenza}
-L'elevamento a potenza utilizza due numeri, una \alert{base} e un \alert{esponente}. Si calcola moltiplicando la base per sé stessa tante volte quante indicate dall'esponente.
+\frametitle{Come misuriamo?}
+Per eseguire una misura, è sempre necessario uno \alert{strumento di misura}:
+\begin{columns}
+  \begin{column}{0.25\textwidth}
+  \begin{figure}
+    \includegraphics[width=\columnwidth]{img/cronometro.jpg}
+
+    Cronometro
+  \end{figure}    
+  \end{column}
+  \begin{column}{0.25\textwidth}
+  \begin{figure}
+    \includegraphics[width=\columnwidth]{img/bilancia.jpg}
+
+    Bilancia
+  \end{figure}    
+  \end{column}
+  \begin{column}{0.25\textwidth}
+  \begin{figure}
+    \includegraphics[width=\columnwidth]{img/calibro.jpg}
+
+    Calibro
+  \end{figure}    
+  \end{column}
+  \begin{column}{0.25\textwidth}
+  \begin{figure}
+    \includegraphics[width=\columnwidth]{img/multimetro.jpg}
+
+    Multìmetro
+  \end{figure}    
+  \end{column}
+\end{columns}\pause
 
 ~
 
-\begin{figure}
-  \includegraphics[width=.4\columnwidth]{img/potenza2.png}
-\end{figure}\pause
-
 ~
 
-Attenzione a non confondere l'elevamento a potenza con la moltiplicazione!
+\begin{itemize}
+  \item Sensibilità = misura più piccola che lo strumento può eseguire;
+  \item portata = misura più grande che lo strumento può eseguire.
+\end{itemize}
 \end{frame}
 
 
-\begin{frame}
-\frametitle{Elevamenti particolari}
-\[a^1 = a \]
-
-\[ a^0 = 1\]
-\end{frame}
 
 \begin{frame}
-\frametitle{Potenze di 10}
-Molto utili e importanti sono le potenze di 10:
-\[10^0 = 1\]\pause
-\[10^1 = 10\]\pause
-\[10^2 = 100\]\pause
-\[10^3 = 1.000\]\pause
-\[10^6 = 1.000.000\]\pause
-\[10^9 = 1.000.000.000\]\pause
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Esercizi sulle potenze}
+\frametitle{Esercizi sulla misurazione}
 \begin{enumerate}
-  \item Calcola il valore delle seguenti potenze:
+  \item Associa ad ogni quantità il corretto strumento di misura:
   \begin{multicols}{2}
+    Quantità:
     \begin{itemize}
-        \item $ 3^2 $
-        \item $ 12^2 $
-        \item $ 2^5 $
-        \item $ 8^3 $
-        \item $ 3^4 $
-        \item $ 2^{10} $
+        \item durata del salto di un gatto;
+        \item lunghezza di un dito;
+        \item spessore di un cartoncino;
+        \item tempo di cottura della pasta;
+        \item altezza di un mobile;
+        \item quantità di burro per una torta.
     \end{itemize}
-  \end{multicols}
-  \item Trova il valore dell'esponente $ k $ in modo che siano vere le seguenti uguaglianze:
-  \begin{multicols}{2}
+    Strumenti:
     \begin{itemize}
-        \item $ 3^k = 81 $
-        \item $ 2^k = 256 $
-        \item $ 5^k = 625 $
-        \item $ 1765^k = 1765 $
+      \item righello;
+      \item metro;
+      \item bilancia da cucina;
+      \item cronometro;
+      \item timer da cucina;
+      \item calibro.
     \end{itemize}
-  \end{multicols}
-  \item Disponi i seguenti numeri in ordine crescente:
-  \[ 3^2\qquad 5^1\qquad 18\qquad 124\qquad 200^0\qquad 6^2\qquad 5^3 \]
-\end{enumerate}
-\end{frame}
 
+    ~
 
-\begin{frame}
-\frametitle{Proprietà delle potenze}
-Le proprietà delle potenze ci aiutano moltissimo a semplificare i calcoli che coinvolgono le potenze.\pause
-
-~
-
-\begin{itemize}
-  \item Prodotto di potenze con la stessa base:
-  \[a^{\textcolor{red}{m}} \cdot a^{\textcolor{red}{n}} = a^{\textcolor{red}{m+n}}\]
-  Esempio:
-  \[2^3 \cdot 2^7 = 2^{3+7} = 2^{10} \]
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Proprietà delle potenze}
-\begin{itemize}
-  \item Quoziente di potenze con la stessa base:
-  \[a^{\textcolor{red}{m}} : a^{\textcolor{red}{n}} = a^{\textcolor{red}{m-n}}\]
-  Esempio:
-  \[2^7 : 2^5 = 2^{7-5} = 2^{2} \]\pause
-  \item Potenza di potenza:\[(a^{\textcolor{red}{m}})^{\textcolor{red}{n}} = a^{\textcolor{red}{m\cdot n}}\]
-  Esempio:
-  \[(9^7)^2 = 9^{7\cdot 2} = 9^{14} \]
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Proprietà delle potenze}
-\begin{itemize}
-  \item Prodotto di potenze con lo stesso esponente:
-  \[ {\textcolor{red}{a}}^n {\textcolor{red}{\cdot b}}^n = {\textcolor{red}{(a \cdot b)}}^n \]
-  Esempio:
-  \[2^7 \cdot 5^7 = (2 \cdot 5)^{7} = 10^{7} \]\pause
-  \item Quoziente di potenze con lo stesso esponente:
-  \[ {\textcolor{red}{a}}^n {\textcolor{red}{: b}}^n = {\textcolor{red}{(a : b)}}^n \]
-  Esempio:
-  \[14^8 : 7^8 = (14 : 7)^{8} = 2^{8} \]
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Esercizi sulle proprietà delle potenze}
-\begin{enumerate}
-  \item Calcola applicando le proprietà delle potenze:
-  \begin{multicols}{2}
-    \begin{itemize}
-        \item $ 2^4 \cdot 2^6 : 2^{10} $
-        
-        ~
-
-        \item $ \left[ (7^2)^3\right]^4 : \left[(7^3)^2\right]^0 $
-        
-        
-        ~
-
-        \item $ a^3 : a^2 $
-        \item $ 3^4 \cdot 3^5 : 3^6 $
-        
-        
-        ~
-
-        \item $ \left[ (2^3 \cdot 3^3)^4 : 6^{10} \right]^2 : (2^2 \cdot 3^2)^2 $
-        
-        
-        ~
-
-        \item $ (a^7)^3 $
-    \end{itemize}
-  \end{multicols}
-  \item Trova il valore di $ x $ in modo che siano vere le seguenti uguaglianze:
-  \begin{multicols}{2}
-    \begin{itemize}
-        \item $ 3^{x+2} = 27 $
-        \item $ 2^{4-x} = 2 $
-    \end{itemize}
-  \end{multicols}
-\end{enumerate}
-\end{frame}
-
-
-\section{Espressioni}
-
-\begin{frame}
-\frametitle{Espressioni}
-Una espressione matematica è una sequenza di calcoli, come ad esempio:
-
-\[8+45:3^2+4\cdot 2-14\]
-  
-Come si esegue? In quale ordine si eseguono le operazioni?
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Espressioni senza parentesi}
-Quando l'espressione è senza parentesi, le operazioni vanno eseguite in questo ordine (rimangono vere le proprietà che abbiamo visto):
-\begin{enumerate}
-  \item elevamento a potenza;
-  \item moltiplicazioni e divisioni;
-  \item somme e sottrazioni.
-\end{enumerate}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Esempio}
-
-\[8+45:\textcolor{red}{3^2}+4\cdot 2-14 = \]\pause
-
-~
-
-\[= 8+\textcolor{red}{45:9}+\textcolor{red}{4\cdot 2}-14 = \]\pause
-
-~
-
-\[= \textcolor{red}{8+5+8-14} = 7 \]
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Espressioni con le parentesi}
-In questo caso si \alert{ragiona a blocchi}, svolgendo prima di tutto le operazioni nelle parentesi più interne.\pause
-
-~
-
-Prova a calcolare:
-\[ 42 : \{ 105 : [(5 \cdot 2^2 + 7) : 3^2 + (7^2 : 7 + 3) : 5] \} \]
-\end{frame}
-
-
-
-\begin{frame}
-\frametitle{Esercizi sulle espressioni (1)}
-\begin{enumerate}
-  \item Traduci in espressioni aritmetiche le seguenti frasi e calcola poi il loro valore.
-  \vspace*{.15cm}
-  \begin{itemize}
-    \item Aggiungi a 72 il prodotto tra 7 e 8.
-    \vspace*{.15cm}
-    \item Moltiplica la differenza di 17 e 8 per la somma di 2 e 3.
-    \vspace*{.15cm}
-    \item Sottrai al prodotto di 7 e 4 il quoziente di 36 e 12.
-    \vspace*{.15cm}
-    \item Moltiplica la somma di 5 e 8 per 2 e sottrai al risultato 10.
-  \end{itemize}
-  \vspace*{.25cm}
-  \item Calcola il valore delle seguenti espressioni:
-  \vspace*{.15cm}
-  \begin{itemize}
-    \item $  1 + [(15 : 3) \cdot 7+ (10 \cdot 2): 4] : (2\cdot4) - [(2\cdot5): 2 - 2] $
-    \vspace*{.15cm}
-    \item $ \{[(6\cdot 4 - 18) + 5\cdot (12-9)]: (7\cdot 2-11) -3+10\} : 7 $
-    \vspace*{.15cm}
-    \item $ [5 \cdot (3 \cdot 8-5 \cdot 4) - 7 ] \{4 \cdot (28: 7+4): [(6 \cdot 5): 15] -2 \cdot 8\} $
-  \end{itemize}
-\end{enumerate}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Esercizi sulle espressioni (2)}
-\begin{enumerate}\setcounter{enumi}{2}
-  \item Calcola il valore delle seguenti espressioni:
-  \vspace*{.15cm}
-  \begin{itemize}
-    \item $  [(3^6 : 3^4) - 2^3] \cdot [(5^3 \cdot 5^4) : (5^2 \cdot 5^3)] : (2^2 + 1) $
-    
-    \hspace{\fill}[$ 5 $]
-    \vspace*{.25cm}
-    \item $  \{[(3^{10} : 3^6)^2 \cdot (3^8:3^3)] : 3^{12}\} + 1^7 + (2^2 \cdot 3 - 11) $
-    
-    \hspace{\fill}[$ 5 $]
-    \vspace*{.25cm}
-    \item $  [(6^3\cdot 2^3 : 4^3) : (10^4 : 5^4 - 7)\cdot 3^4]^2 : (3^3\cdot 3^2)^2 $
-    
-    \hspace{\fill}[$ 1 $]
-    \vspace*{.25cm}
-    \item $ 2^2 + \{[(3 \cdot 2^2 + 2) \cdot 2 - 6 \cdot 2 + (2 \cdot 6 + 1^5 \cdot 7)] : 5 + 7\} : 14 +4 $
-    
-    \hspace{\fill}[$ 9 $]
-  \end{itemize}
-\end{enumerate}
-\end{frame}
-
-
-\section{Numeri interi}
-
-
-\begin{frame}
-\frametitle{Un nuovo insieme di numeri}
-I numeri interi o relativi, sono tutti numeri interi (senza virgola) e sono caratterizzati da un segno negativo, nullo o positivo:
-\[ \mathbb{Z} = \{ \ldots, -5, -4, -3, -2, -1, 0, +1, +2, +3, +4, +5, \ldots \}\]\pause
-Il nuovo insieme \alert{include} il precedente insieme $ \mathbb{N} $.
-
-~
-
-\visible<2->{\begin{figure}
-  \includegraphics[width=.8\columnwidth]{img/rettarelativi.png}
-\end{figure}}\pause
-Per comodità, a volte il segno + viene omesso, e quindi scrivere $ +6 $ oppure semplicemente $ 6 $ è la stessa cosa.
-\end{frame}
-
-
-
-\begin{frame}
-\frametitle{Utilizzi dei negativi}
-I numeri negativi permettono di svolgere operazioni che erano impossibili nell'insieme $ \mathbb{N} $ dei naturali, ad esempio:
-\[18- 20 \]\pause
-Ora possiamo dire che il risultato di $ 18-20 $ è $ -2 $.\pause
-
-~
-
-I numeri negativi vengono utilizzati anche nella vita reale:
-\visible<3->{\begin{figure}
-  \includegraphics[width=.25\columnwidth]{img/termometro.jpg}
-\end{figure}}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Valore assoluto}
-Per capire il concetto di valore assoluto è importante \alert{visualizzare} i numeri interi:
-\begin{figure}
-  \includegraphics[width=.8\columnwidth]{img/rettarelativi.png}
-\end{figure}\pause
-Il valore assoluto di un numero si indica con \alert{due sbarrette intorno ad un numero}, come:
-\[|-7|\]
-\end{frame}
-
-\begin{frame}
-\frametitle{Valore assoluto come distanza}
-Il valore assoluto di un numero corrisponde alla \alert{distanza del numero dallo 0} sulla retta dei numeri.
-\begin{figure}
-  \includegraphics[width=.8\columnwidth]{img/modulodistanza.png}
-\end{figure}
-Quindi:
-\[|-3| = |+3| = 3\]\pause
-
-Quali due numeri interi hanno valore assoluto pari a 14?
-\end{frame}
-
-\begin{frame}
-\frametitle{Terminologia}
-Vediamo alcune utili definizioni:
-\begin{itemize}
-  \item \alert{numeri concordi}, se hanno lo stesso segno, come:
-  \begin{center}
-    $ -7 $ e $ -100 $
-  \end{center}\pause
-  \item \alert{numeri discordi}, se hanno segno diverso, come:
-  \begin{center}
-    $ -12 $ e $ +4 $
-  \end{center}\pause
-  \item \alert{numeri opposti}, se hanno lo stesso valore assoluto e segno diverso, come:
-  \begin{center}
-    $ -8 $ e $ +8 $
-  \end{center}
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Confronto tra numeri interi}
-Il confronto tra numeri interi, indicato con $ = $, $ > $ e $ < $, avviene come per i numeri naturali.\pause
-
-~
-
-È sempre bene \alert{visualizzare i numeri interi} per poterli confrontare bene. Numeri che sono più a destra sono più grandi, numeri che sono più a sinistra sono più piccoli.\pause
-
-\[ -3 < +9 \]\pause
-\[ -23 < -1 \]\pause
-\[ +13 > +2\]\pause
-\[ +6 > -300 \]
-\end{frame}
-
-\begin{frame}
-\frametitle{Somme e sottrazioni}
-\alert{La somma e la sottrazione si svolgono come per i numeri naturali}, spostandosi a destra o sinistra sulla retta dei numeri:
-
-\begin{figure}
-  \includegraphics[width=.8\columnwidth]{img/sommainteri.png}
-
-  ~
-
-  $ -5 + 9 = +4 $
-\end{figure}\pause
-
-Non ci sono regole ``strane'' da applicare!
-\end{frame}
-
-
-\begin{frame}
-\frametitle{La regola dei segni}
-Per svolgere moltiplicazioni e divisioni dobbiamo invece studiare la regola dei segni:
-
-~
-
-\begin{block}{Regola dei segni (1)}
-  Il prodotto/quoziente di numeri con lo \alert{stesso segno} è un numero \alert{positivo}.
-
-  \[ (+5)\cdot(+2) = +10 \qquad\qquad\qquad (-3):(-1) = +3\]\pause
-
-  Il prodotto/quoziente di numeri con \alert{segno diverso} è un numero \alert{negativo}. 
-
-  \[ (+4)\cdot(-3) = -12 \qquad\qquad\qquad (-9):(+3) = -3\]
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Regola dei segni per le potenze} 
-\begin{block}{Regola dei segni (2)}
-  Le \alert{potenze pari} di qualsiasi numero \alert{sono positive}.
-
-  \[ (+2)^4 = +16 \qquad\qquad\qquad (-2)^4 = +16 \]\pause
-
-  Le \alert{potenze dispari} invece \alert{mantengono il segno della base}.
-
-  \[ (+4)^3 = +64 \qquad\qquad\qquad (-4)^3 = -64 \]
-\end{block}\pause
-
-Riesci a spiegare perché?
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Esercizi su somma e differenza di numeri interi}
-\begin{enumerate}\setcounter{enumi}{0}
-  \item Completa la tabella:
-\end{enumerate}
-\begin{figure}
-  \includegraphics[width=\columnwidth]{img/eseinteri.png}
-\end{figure}
-\begin{enumerate}\setcounter{enumi}{1}
-  \item Inserisci al posto dei puntini il numero mancante:
-  \begin{multicols}{2}
-    \begin{itemize}
-      \item $ (+14) + (\ldots) = -8 $
-      
-      ~
-      \item $ (-12) + (\ldots) = +5 $
-      \item $ (\ldots) - (-4) = -6 $
-      
-      ~
-      \item $ (+3) - (\ldots) = +8 $
-    \end{itemize}
+    ~
   \end{multicols}
 \end{enumerate}
 \end{frame}
 
 
 
+
+
+\section{Unità di misura}
+
+
 \begin{frame}
-\frametitle{Esercizi su somma e differenza di numeri interi}
-\begin{enumerate}\setcounter{enumi}{0}
-  \item Completa la tabella:
-\end{enumerate}
-\begin{figure}
-  \includegraphics[width=\columnwidth]{img/eseinteri1.png}
-\end{figure}
-\begin{enumerate}\setcounter{enumi}{1}
-  \item Inserisci al posto dei puntini il numero mancante:
-  \begin{multicols}{2}
-    \begin{itemize}
-      \item $ (-9) \dot (\ldots) = +108 $
-      
-      ~
-      \item $ (+3) \cdot (\ldots) = -48 $
-      \item $ (\ldots) \cdot (-8) = -104 $
-      
-      ~
-      \item $ (-32) : (\ldots) = +4 $
-    \end{itemize}
-  \end{multicols}
-\end{enumerate}
+\frametitle{Il Sistema Internazionale}
+Le unità di misura sono delle quantità fisse, stabilite internazionalmente a partire dal 1791, per \alert{standardizzare la misura} nel mondo.\pause
+
+~
+
+Il \alert{Sistema Internazionale} delle unità di misura (1889) è costituito da \alert{7 unità di misura fondamentali}.\pause
+
+~
+
+\alert{Combinando le udm fondamentali possiamo ottenere delle udm derivate}, per misurare tutto ciò che è misurabile.
 \end{frame}
 
 
 \begin{frame}
-\frametitle{Espressioni coi numeri interi}
-\begin{enumerate}
-  \item Calcola il valore delle seguenti espressioni:
-  \vspace*{.15cm}
-  \begin{itemize}
-    \item $  \{-14+3 \cdot [9+ 2 \cdot (-2) - 3 \cdot (17 + 2 - 15)]\} \cdot (-1) $
-    
-    \hspace{\fill}[$ +35 $]%184
-    \vspace*{.25cm}
-    \item $ [25 - (-13 +12)] : 13 + [3 + 2(-12 - 4) : (+5 + 3) - 1] $
-    
-    \hspace{\fill}[$ 0 $]%185
-    \vspace*{.25cm}
-    \item $  \{[(-8)^2]^5\}^3 : \{[(-8)^3]^2\}^5 $
-    
-    \hspace{\fill}[$ 1 $]%203
-    \vspace*{.25cm}
-    \item $ [(-5) ^2\cdot (-5)^3 : (-5)^4]^2 - (8 - 2^2 - 3^2) \cdot  (5^6 : 5^4 - 30) $
-    
-    \hspace{\fill}[$ 0 $]%212
-  \end{itemize}
-\end{enumerate}
-\end{frame}
-
-\begin{frame}
-\frametitle{Un'espressione speciale}
-\footnotesize{ $ \left\{ -7 + \left[ - (-4 + 13^0) + (-6+2-1)^2 \cdot (5-7)^2 : (8-2-6) \right]^2 \right\} : \left[ (-3)^2 \right]^2 $}\pause%222
-
-  ~
-
-  ~
-
-  ~
-\normalsize
-  Perché questa espressione è \alert{impossibile}?
-\end{frame}
-
-
-
-\section{Numeri decimali}
-
-
-\begin{frame}
-\frametitle{Cosa sono i numeri decimali?}
-I numeri decimali sono numeri formati da \alert{due parti}:
-\begin{itemize}
-  \item una \alert{parte intera}, prima della virgola;\pause
-  \item una \alert{parte decimale}, dopo la virgola.\pause
-\end{itemize}
-Sono numeri che utilizziamo tutti i giorni, ad esempio per i prezzi o i pesi dei prodotti.
-
-\begin{figure}
-  \includegraphics[width=.4\columnwidth]{img/scontrino.jpg}
-\end{figure}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Nomi delle cifre decimali}
-\begin{table}[]\def\arraystretch{1.5}
-  \begin{tabular}{|r|c|c|c|}\hline
-  \textbf{Nome della cifra} & \textbf{Posizione} & \textbf{Valore} & \textbf{Simbolo} \\\hline
-  decimi                    & 1                  & 0,1             & d                \\\hline
-  centesimi                 & 2                  & 0,01            & c                \\\hline
-  millesimi                 & 3                  & 0,001           & m                \\\hline
+\frametitle{Unità di misura fondamentali}
+\begin{table}[htp]\centering
+  \begin{tabular}{ccc}\hline\rule{0pt}{3ex}
+        \textbf{Grandezza}    & \textbf{Udm}  & \textbf{Simbolo}\\\hline\rule{0pt}{3ex}
+        lunghezza             & metro         & $ m $\\\hline\rule{0pt}{3ex}
+        tempo                 & secondo       & $ s $\\\hline\rule{0pt}{3ex}
+        massa                 & chilogrammo   & $ kg $ \\\hline\rule{0pt}{3ex}
+        temperatura assoluta  & kelvin        & $ K $\\\hline\rule{0pt}{3ex}
+        quantità di sostanza  & mole          & $ mol $\\\hline\rule{0pt}{3ex}
+        corrente elettrica    & ampere        & $ A $\\\hline\rule{0pt}{3ex}
+        intensità luminosa    & candela       & $ cd $\\\hline
   \end{tabular}
-\end{table}\pause
-
-~
-
-Esempio:
-\[ 4,745 \]
-4 unità, 7 decimi, 4 centesimi e 5 millesimi
-\end{frame}
-
-
-
-\begin{frame}
-\frametitle{Confronto tra decimali}
-Quando confrontiamo due decimali, attenzione a fare il confronto \alert{cifra per cifra}: confrontare le unità con le unità, i decimi con i decimi, ecc.\pause
-
-~
-
-Esempio:
-\[ 7,099 < 7,12 \]
-La prima cifra per cui differiscono sono i decimi, ed è quella da guardare per ordinare i numeri.
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Rapresentazione dei decimali}
-Come tutti gli altri numeri, anche i decimali si possono \alert{visualizzare su una retta orientata}:
-
-\begin{figure}
-  \includegraphics[width=.8\columnwidth]{img/rettadecimali.png}
-\end{figure}
+\end{table}
 \end{frame}
 
 
 
 
 \begin{frame}
-\frametitle{Esercizi sull'ordinamento dei decimali}
-\begin{enumerate}
-  \item Disponi in ordine crescente i seguenti numeri decimali:
-    \[ 1,8\qquad0,3\qquad1,5\qquad6,9\qquad5,3\qquad1,799\qquad1,485\qquad0,305 \]
-  \item Completa le seguenti frasi:
-  
-  ~
-    \begin{itemize}
-        \item 1000 millesimi formano \ldots unità.
-        
-        ~
-        \item 2000 centesimi formano \ldots unità.
-        
-        ~
-        \item 200 decimi formano \ldots unità.
-        
-        ~
-        \item 4000 decimi formano \ldots unità.
-    \end{itemize}
-\end{enumerate}
-\end{frame}
-
-
-
-\begin{frame}
-\frametitle{Operazioni coi decimali}
-Le operazioni coi decimali seguono le stesse regole di tutti gli altri numeri.\pause
-
-~
-
-È molto comodo visualizzare somme e sottrazioni \alert{in colonna}, per non confondersi con le cifre decimali.
-
-~
-
-Per eseguire 5,15 + 2,743 facciamo:
-\begin{table}[]\def\arraystretch{1.2}
-  \begin{tabular}{llllll}
-  5 & , & 1 & 5 &   & + \\
-  2 & , & 7 & 4 & 3 & = \\\hline
-  7 & , & 8 & 9 & 3 &   \\
-  \end{tabular}
-  \end{table}
-
-\end{frame}
-
-
-
-\begin{frame}
-\frametitle{Approssimare}
-A volte, nei nostri calcoli con la calcolatrice, otteniamo numeri ``scomodi'', come:
-\[5,1814894\]
-
-~
-
-Spesso non ci interessano più di \alert{due o tre cifre decimali}, e vogliamo quindi ``tagliare'' il numero, cioè \alert{approssimarlo}.\pause
-
-~
-
-5,18 è una approssimazione accettabile del numero precedente.
-\end{frame}
-
-
-
-\begin{frame}
-\frametitle{Regole per approssimare}
-Prima di tutto dobbiamo \alert{decidere a quale cifra approssimare}: ai decimi (una cifra), ai centesimi (due cifre) o ai millesimi (tre cifre).\pause
-
-~
-
-Dobbiamo poi guardare \alert{la cifra successiva all'ultima che vogliamo scrivere}:\pause
-
-~
-\begin{itemize}
-  \item se la cifra successiva è 0, 1, 2, 3 o 4, approssimiamo per \alert{difetto}, eliminando la parte che non vogliamo;\pause
-  
-  ~
-  \item se la cifra successiva è 5, 6, 7, 8 o 9, approssimiamo per \alert{eccesso}, aumentando di 1 l'ultima cifra che scriviamo.
-\end{itemize}
-\end{frame}
-
-
-
-\begin{frame}
-\frametitle{Esempi}
-\[\alert<2->{7,2}\alert<3->{7}\alert<4->{3}5\]\pause
-
-Approssimazione ai decimi: 7,3.\pause
-
-~
-
-Approssimazione ai centesimi: 7,27.\pause
-
-~
-
-Approssimazione ai millesimi: 7,274.
-\end{frame}
-
-
-
-
-\begin{frame}
-\frametitle{Esercizi sull'ordinamento dei decimali}
-\begin{enumerate}
-  \item Approssima i seguenti numeri a una cifra decimale:
-    \[ 1,83\qquad0,35\qquad1,485\qquad0,3058178 \]
-  \item Approssima i seguenti numeri a due cifre decimali:
-    \[ 6,099\qquad4,0673\qquad9,005\qquad3,2324 \]
-
-\end{enumerate}
-\end{frame}
-
-
-
-\begin{frame}
-\frametitle{E le frazioni?}
-I numeri decimali, sia positivi sia negativi, possono essere anche espressi sotto forma di \alert{frazioni}, che vanno a costituire l'insieme $ \mathbb{Q} $ dei \alert{numeri razionali}.\pause
-
-~
-
-Ad esempio:
+\frametitle{Unità di misura derivate}
+Ad esempio, misuriamo \alert{la superficie} (come quella di una pavimento) \alert{in $ m^2 $}:
 \begin{center}
-  $ 7,7 = 77 : 10 = \dfrac{77}{10} $\pause
-  
-  ~
-
-  ~
-
-  $ -2,3 = -23 : 10 = -\dfrac{23}{10} $
+$ 1 \, m^2 = 1 \, m \cdot m $
 \end{center}\pause
 
-Le frazioni sono solo un modo più comodo di scrivere delle divisioni!
+~
+
+Misuriamo invece \alert{la potenza} (come quella del motore di un'auto o di una piastra per capelli) \alert{in Watt}:
+\begin{center}
+$ 1 \, W = 1 \, \dfrac{kg \cdot m^2}{s^3} $
+\end{center}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Unità di misura utili ma imprecise}
+\begin{figure}
+  \includegraphics[width=\columnwidth]{img/spanna.png}
+\end{figure}
+\end{frame}
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Le ``nostre'' unità di misura}
+Nel nostro corso ci concentriamo sulle seguenti unità:
+
+\begin{table}[]\def\arraystretch{1.5}
+  \begin{tabular}{rcc}
+  \textbf{Nome} & \textbf{Simbolo} & \textbf{Cosa misura} \\\hline
+  metro         & m                & lunghezza            \\\hline
+  litro         & L                & capacità, spazio     \\\hline
+  grammo        & g                & massa                \\\hline
+  secondo       & s                & tempo                \\\hline
+  \end{tabular}
+\end{table}
+\end{frame}
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Esercizi sulle unità di misura}
+\begin{enumerate}
+  \item Associa ad ogni quantità la corretta unità di misura:
+  \begin{multicols}{2}
+    Quantità:
+    \begin{itemize}
+        \item durata del salto di un gatto;
+        \item lunghezza di un dito;
+        \item contenuto di una lattina;
+        \item spessore di un cartoncino;
+        \item tempo di cottura della pasta;
+        \item altezza di un mobile;
+        \item dimensioni di una stanza;
+        \item quantità di burro per una torta.
+    \end{itemize}
+    Unità di misura:
+    \begin{itemize}
+      \item secondi;
+      \item litri;
+      \item metri;
+      \item grammi;
+    \end{itemize}
+
+    ~
+
+    ~
+
+    ~
+
+    ~
+
+    ~
+
+  \end{multicols}
+\end{enumerate}
+\end{frame}
+
+
+
+
+\section{Multipli}
+
+\begin{frame}
+\frametitle{Problemi di misura}
+Come avrai notato da alcuni esempi, possiamo misurare cose \alert{molto grandi}, come la massa della Luna:
+
+\[ 73.000.000.000.000.000.000.000 \, kg \]
+
+~
+
+oppure \alert{molto piccole}, come lo spessore di un capello:
+
+\[ 0,00008 \, m \]\pause
+
+~
+
+Per rendere queste misure più comode da esprimere, esistono i \alert{multipli e sottomultipli delle unità di misura}.
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Multipli}
+I multipli sono unità di misura 10, 100, 1000 volte più grandi di quella di partenza e vengono indicati con un prefisso:
+\begin{itemize}
+  \item \alert{da-} (deca-) per multipli \alert{10 volte più grandi};\pause
+  
+  \[ 1 \, daL = 10 \, L \]\pause
+  \item \alert{h-} (etto-) per multipli \alert{100 volte più grandi};\pause
+  
+  \[ 1 \, hg = 100 \, g \]\pause
+
+  \item \alert{k-} (chilo-) per multipli \alert{1000 volte più grandi}.\pause
+  
+  \[ 1 \, km = 1000 \, m \]
+\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Sottomultipli}
+I sottomultipli sono unità di misura 10, 100, 1000 volte più piccole di quella di partenza e vengono indicati con un prefisso:
+\begin{itemize}
+  \item \alert{d-} (deci-) per sottomultipli \alert{10 volte più piccoli};\pause
+  
+  \[ 1 \, dL = 0,1 \, L \]\pause
+  \item \alert{c-} (centi-) per sottomultipli \alert{100 volte più piccoli};\pause
+  
+  \[ 1 \, cm = 0,01 \, m \]\pause
+
+  \item \alert{m-} (milli-) per sottomultipli \alert{1000 volte più piccoli}.\pause
+  
+  \[ 1 \, ms = 0,001 \, s \]
+\end{itemize}
 \end{frame}
 
 
 \begin{frame}
-\frametitle{Insiemi numerici}
-
+\frametitle{Multipli e sottomultipli del metro}
+Riassumendo, per il metro:
 \begin{figure}
-  \begin{tikzpicture}
-    \draw[thick, purple] (0,0) ellipse (3cm and 1.5cm);
-    \node[purple] at (2,.4) {$ \mathbb{N} $};
-    \node[below,purple] at (2,.4) {naturali};
-    \node[] at (-2,0) {$ 2 $};
-    \node[] at (0,1) {$ 10 $};
-    \node[] at (1,-1) {$ 135 $};
-    \draw[thick, blue] (.6,0) ellipse (4cm and 2.5cm);
-    \node[blue] at (3.8,.4) {$ \mathbb{Z} $};
-    \node[below,blue] at (3.8,.4) {interi};
-    \node[] at (2.5,1.3) {$ -6 $};
-    \node[] at (1,-1.8) {$ -1 $};
-    \node[] at (1,1.8) {$ 100 $};
-    \draw[thick, red] (1.2,0) ellipse (5cm and 3.5cm);
-    \node[red] at (5.4,.4) {$ \mathbb{Q} $};
-    \node[below,red] at (5.4,.4) {razionali};
-    \node[] at (4.5,1.7) {$ \dfrac{2}{3} $};
-    \node[] at (4.5,-1.7) {$ -\dfrac{23}{10} $};
-    \node[] at (3,-2.7) {$ \dfrac{16}{7} $};
-\end{tikzpicture}
+  \includegraphics[width=\columnwidth]{img/metro.png}
 \end{figure}
 \end{frame}
+
+
+
+
+
+\section{Equivalenze}
+
+
+
+\begin{frame}
+\frametitle{Equivalenze tra unità di misura}
+Le equivalenze sono \alert{conversioni tra una udm all'altra}.
+
+\[ 1,25 \, km = 1250 \, m \]\pause
+
+~
+
+Attenzione! Posso convertire solo unità \alert{dello stesso tipo}:\pause
+
+\begin{itemize}
+  \item posso convertire i grammi in chilogrammi;\pause
+  \item \alert{non} posso convertire i grammi in secondi.
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Un'osservazione fondamentale}
+\begin{columns}
+  \begin{column}{0.5\textwidth}
+  \begin{figure}
+    \includegraphics[width=\columnwidth]{img/bibite.jpg}
+  \end{figure}    
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    Misuriamo in bottiglie:
+    \begin{center}
+      Ci sono \alert{$ 378 $} bottiglie d'acqua.\pause  
+    \end{center}
+    
+    ~
+
+    Misuriamo in casse:
+    \begin{center}
+      Ci sono \alert{$ 63 $} casse d'acqua.\pause  
+    \end{center}
+  \end{column}
+\end{columns}
+
+~
+
+
+~
+
+Se passiamo ad una ``unità di misura'' più grande, \alert{il numero diminuisce}!
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Funziona anche al contrario!}
+\begin{columns}
+  \begin{column}{0.5\textwidth}
+  \begin{figure}
+    \includegraphics[width=\columnwidth]{img/biscotti.png}
+  \end{figure}    
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    Misuriamo in pacchetti:
+    \begin{center}
+      Ci sono \alert{$ 7 $} pacchetti.\pause  
+    \end{center}
+    
+    ~
+
+    Misuriamo in biscotti:
+    \begin{center}
+      Ci sono \alert{$ 350 $} biscotti.\pause  
+    \end{center}
+  \end{column}
+\end{columns}
+
+~
+
+
+~
+
+Se passiamo ad una ``unità di misura'' più piccola, \alert{il numero aumenta}!
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Da grande a piccolo}
+Quando passiamo ad una unità di misura \alert{più piccola}, il numero deve diventare \alert{più grande}:
+
+\[ 120 \, m = 120.000 \, mm  \]\pause
+
+Dobbiamo quindi ``spostare la virgola'' verso destra.
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Da piccolo a grande}
+Quando passiamo ad una unità di misura \alert{più grande}, il numero deve diventare \alert{più piccolo}:
+
+\[ 670 \, cL = 6,7 \, L  \]\pause
+
+Dobbiamo quindi ``spostare la virgola'' verso sinistra.
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{``Contare i salti''}
+Come possiamo visualizzare \alert{di quanto} spostarci con la virgola?
+
+~
+
+Un esempio con i metri:
+
+~
+
+\begin{figure}
+  \includegraphics[width=\columnwidth]{img/saltimetro.jpg}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{I ``salti'' con altre udm}
+\begin{figure}
+  \includegraphics[width=\columnwidth]{img/saltiudm.png}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Esempio 1}
+\[  1245 \, cm = \ldots \, m \]\pause
+
+~
+
+Come pensare:
+\begin{enumerate}
+  \item i metri sono più grandi dei centimetri, quindi:
+  \item il numero diventa più piccolo, quindi:
+  \item sposto la virgola a sinistra;
+  \item tra cm e m ci sono due salti, quindi:
+  \item la virgola si sposta a sinistra di due posti.
+\end{enumerate}
+  
+\[  12\alert{\overleftarrow{45\phantom{,}}} \, cm = 12,45 \, m \]\pause
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Esempio 2}
+\[  5,7 \, dL = \ldots \, mL \]\pause
+
+~
+
+Come pensare:
+\begin{enumerate}
+  \item i mL sono più piccoli dei dL, quindi:
+  \item il numero diventa più grande, quindi:
+  \item sposto la virgola a destra;
+  \item tra dL e mL ci sono due salti, quindi:
+  \item la virgola si sposta a destra di due posti (devo aggiungere degli zeri).
+\end{enumerate}
+  
+\[  5\alert{\overrightarrow{,7\phantom{0}}} \, dL = 570 \, mL \]\pause
+\end{frame}
+
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Esercizi sulle equivalenze tra udm}
+\begin{enumerate}\setcounter{enumi}{0}
+  \item Converti le seguenti misure in metri:
+  \begin{multicols}{2}
+    \begin{itemize}
+        \item $ 15,8 \, cm $
+        \item $ 0,532 \, km $
+        \item $ 54556 \, mm $
+        \item $ 0,98 \, dm $
+        \item $ 44,7 \, km $
+        \item $ 2145 \, cm $
+    \end{itemize}
+  \end{multicols}
+  \item Converti le seguenti misure in dL:
+  \begin{multicols}{2}
+    \begin{itemize}
+        \item $ 15 \, mL $
+        \item $ 12 \, L $
+        \item $ 0,566 hL $
+        \item $ 1993 \, cL $
+    \end{itemize}
+  \end{multicols}
+  \item Converti le seguenti misure in g:
+  \begin{multicols}{2}
+    \begin{itemize}
+        \item $ 12,5 \, kg $
+        \item $ 1,34 \, hg $
+        \item $ 5666 \, mg $
+        \item $ 599,2 \, cg $
+    \end{itemize}
+  \end{multicols}
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Esercizi sulle equivalenze tra udm}
+\begin{enumerate}\setcounter{enumi}{3}
+  \item Ricopia sul quaderno il seguente schema di un mobile, convertendo tutte le misure in millimetri:
+  \begin{figure}
+    \includegraphics[width=.6\columnwidth]{img/mobile.jpg}
+  \end{figure}
+\end{enumerate}
+\end{frame}
+
+
+
+
+
+
+%MISURA LA POTENZA DEL PHON E DELLA PIASTRA!!!
+
+%ESERCIZIO IN CUI SI CONVERTONO LE MISURE DI QUALCOSA (UNA STANZA, UN OGGETTO) DA UNA UDM ALL'ALTRA
+
+
+\section{Unità derivate}
+
+
+\begin{frame}
+\frametitle{Altre unità}
+Le unità che abbiamo possono essere \alert{combinate tra loro} per ottenerne delle altre.\pause
+
+~
+
+I multipli, sottomultipli e le conversioni con queste nuove unità funzionano \alert{esattamente come con quelle di base}.
+
+\[ 1500 \, W = 1,5 \, kW \]
+
+~
+
+\[ 12 \, kcal = 12.000 \, cal\]
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Energia}
+L'energia è quello che permette al nostro corpo e alle macchine che utilizziamo di funzionare.\pause
+
+\begin{columns}
+  \begin{column}{0.3\textwidth}
+  \begin{figure}
+    \includegraphics[width=\columnwidth]{img/etichetta.png}
+  \end{figure}    
+  \end{column}
+  \begin{column}{0.3\textwidth}
+  \begin{figure}
+    \includegraphics[width=\columnwidth]{img/bolletta.jpg}
+  \end{figure}    
+  \end{column}
+\end{columns}
+
+~
+
+L'energia si misura in:
+\begin{itemize}
+  \item joule e kilojoule, $ J $ e $ kJ $;
+  \item calorie e kilocalorie, $ cal $ e $ kcal $;
+  \item kilowattora, $ kWh $, come nelle bollette (a ottobre 2024, $ 1 \, kWh  $ costa circa $ 0,13 $ €).
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Potenza}
+La potenza indica quanta energia viene utilizzata/fornita al secondo.
+
+~
+
+La potenza si misura in:
+\begin{itemize}
+  \item watt e kilowatt, $ W $ e $ kW $;
+  \item cavalli vapore, $ cv $ o $ hp $.
+\end{itemize}
+
+\begin{columns}
+  \begin{column}{0.25\textwidth}
+  \begin{figure}
+    \includegraphics[width=\columnwidth]{img/ciclisti.jpg}
+
+    $ 700 \, W $
+  \end{figure}    
+  \end{column}
+    \begin{column}{0.25\textwidth}
+  \begin{figure}
+    \includegraphics[width=\columnwidth]{img/500.png}
+
+    $ 69 \, cv  = 51 \, kW $, 
+  \end{figure}    
+  \end{column}
+  \begin{column}{0.25\textwidth}
+  \begin{figure}
+    \includegraphics[width=\columnwidth]{img/phon.png}
+
+    $ 1875 \, W $
+  \end{figure}    
+  \end{column}
+  \begin{column}{0.25\textwidth}
+  \begin{figure}
+    \includegraphics[width=\columnwidth]{img/centrale.jpg}
+
+    $ > 600.000 \, kW $
+  \end{figure}    
+  \end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Corrente elettrica}
+La corrente elettrica è ciò che scorre nei cavi dei nostri dispositivi elettronici e delle nostre lampadine e si misura in ampere, $ A $.
+
+\begin{columns}
+  \begin{column}{0.3\textwidth}
+  \begin{figure}
+    \includegraphics[width=\columnwidth]{img/cavo.jpg}
+
+    $ 70 \, mA $
+  \end{figure}    
+  \end{column}
+  \begin{column}{0.3\textwidth}
+  \begin{figure}
+    \includegraphics[width=\columnwidth]{img/usb.jpg}
+
+    $ 0,5 \, A$
+  \end{figure}    
+  \end{column}
+\end{columns}
+
+~
+
+Una corrente sopra i $ 10 \, mA $ può essere pericolosa per gli umani. Oltre i $ 200 \, mA $ si hanno effetti letali.
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Differenza di potenziale}
+La differenza di potenziale o tensione si misura in volt ($ V $) ed è ciò che permette alla corrente di scorrere. Quando premiamo un interruttore stiamo attivando una tensione nel cavo.
+
+~
+
+\begin{columns}
+  \begin{column}{0.3\textwidth}
+  \begin{figure}
+    \includegraphics[width=\columnwidth]{img/cavo.jpg}
+
+    $ 220 \, V $ (AC)
+  \end{figure}    
+  \end{column}
+  \begin{column}{0.3\textwidth}
+  \begin{figure}
+    \includegraphics[width=\columnwidth]{img/usb.jpg}
+
+    $ 5 \, V $ (DC)
+  \end{figure}    
+  \end{column}
+  \begin{column}{0.3\textwidth}
+  \begin{figure}
+    \includegraphics[width=\columnwidth]{img/altatensione.jpg}
+
+    $ 50 \, kV $ (AC/DC)
+  \end{figure}    
+  \end{column}
+\end{columns}
+
+~
+
+~
+
+
+Se la tensione continua/alternata supera i $ 50 \, V/120 \, V $, la corrente può attraversare il corpo umano.
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Campo magnetico}
+Il campo magnetico è l'effetto di una calamita intorno a sé e si misura in tesla ($ T $).
+
+\begin{columns}
+  \begin{column}{0.3\textwidth}
+  \begin{figure}
+    \includegraphics[width=\columnwidth]{img/bussola.png}
+
+    $ 0,050 \, mT $
+  \end{figure}    
+  \end{column}
+  \begin{column}{0.3\textwidth}
+  \begin{figure}
+    \includegraphics[width=\columnwidth]{img/frigo.jpg}
+
+    $ 6 \, mT $
+  \end{figure}    
+  \end{column}
+  \begin{column}{0.3\textwidth}
+  \begin{figure}
+    \includegraphics[width=\columnwidth]{img/scrap.jpg}
+
+    $ 2 \, T $
+  \end{figure}    
+  \end{column}
+\end{columns}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Volume di un suono}
+Il volume di un suono si misura in decibel ($ dB $). Volumi quotidiani oltre $ 85 \, dB $ sono dannosi.
+
+\begin{figure}
+  \includegraphics[width=.8\columnwidth]{img/volume.png}
+\end{figure}
+
+Gli auricolari moderni possono anche superare i $ 100 \, dB $.
+\end{frame}
+
+
+
+
+
 
 \end{document}
