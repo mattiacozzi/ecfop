@@ -452,3 +452,110 @@ Servono a contare il numero di celle in un intervallo che contengono qualcosa.
 =CONTA.VALORI conta il numero di celle che contengono qualcosa
 =CONTA.VUOTE conta il numero di celle vuote
 
+
+
+
+
+
+
+
+FILTRI E ORDINAMENTO  vid 47 + https://www.youtube.com/watch?v=hzq6muEeo6M
+Creiamo una tabella con Autore / Anno / Titolo / Casa Editrice / Numero di pagine
+Creiamo almeno una decina di record.
+
+Molto importante creare l'intestazione della tabella
+
+Seleziono la riga di intestazione e dal ribbon "Filtro"
+
+Adesso possiamo filtrare e ordinare i nostri dati.
+
+Prova a esplorare le opzioni di filtraggio e ordinamento.
+
+Se coloriamo alcune celle (ad esempio con la formattazione condizionale) posso anche filtrare per colore.
+
+Il filtro è solo un'opzione di visualizzazione, i dati non mostrati non scompaiono, solo non vengono mostrati.
+
+Excel indica che stiamo mostrando dati filtrati con un colore diverso delle righe.
+
+
+
+
+
+
+
+
+FUNZIONI LOGICHE vid 40
+AND
+Se due condizioni sono vere, restituisce VERO, altrimenti FALSO.
+
+Tavola di verità!
+
+Sintassi
+=E(condizione1;condizione2)
+
+OR
+Se almeno una tra due condizioni è vera, restituisce VERO, altrimenti FALSO.
+
+Tavola di verità!
+
+Sintassi
+=O(condizione1;condizione2)
+
+IF
+Se una certa condizione è verificata, viene eseguita una certa operazione, altrimenti ne viene eseguita un'altra.
+
+Tavola di verità!
+
+Sintassi
+=SE(condizione;operazione1;operazione2)
+
+La condizione può contenere tutto, anche altre funzioni logiche.
+
+
+In generale le funzioni logiche sono molto utili all'interno di altre funzioni.
+
+
+
+
+
+
+SOMMA SE vid 41
+=SOMMA.SE(range;"cond") la condizione si controlla sui valori del range
+Esempio:
+=SOMMA.SE(A1:A9;">10")
+
+Posso anche applicare la condizione ad un insieme di celle diverso dal range per la somma.
+=SOMMA.PIÙ.SE(range;intervalloCriteri;"cond") la condizione si controlla sull'intervallo dei criteri. Posso anche mettere più criteri.
+
+Ottimo esempio nel video!
+
+CONTA.SE e CONTA.PIÙ.SE vid 41
+Conta le celle che corrispondono ad una certa condizione. La sintassi è la stessa delle funzioni precedenti.
+
+Ottimo esempio nel video!
+
+
+MEDIA.SE e MEDIA.PIÙ.SE vid 41
+Come prima.
+
+
+
+
+
+
+CONFRONTA vid 42
+=CONFRONTA(valore;matrice)
+Restituisce la riga della matrice (non la riga del foglio!) in cui compare una cella che contiene un certo valore (che può anche essere indicato mediante una cella).
+
+
+INDICE vid 42
+Ritorna il valore contenuto in una certa colonna di una certa riga di una certa matrice.
+=INDICE(matrice;rigaDellaMatriceNonDelFoglio;colonnaDellaMatriceDaMostrare)
+È di fatto l'intersezione tra una riga e una colonna di riferimento.
+Molto utile in combinazione con la funzione precedente.
+
+
+
+
+
+
