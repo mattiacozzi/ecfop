@@ -1,0 +1,153 @@
+\documentclass[12pt]{exam}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[italian]{babel}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\def\angolo[#1](#2)(#3:#4:#5)% Syntax: [draw options] (center) (initial angle:final angle:radius)
+    { \draw[#1] ($(#2)+({#5*cos(#3)},{#5*sin(#3)})$) arc (#3:#4:#5); }
+
+\newcommand{\class}{Matematica 1 ACC}     %Fisica 5 LS
+\newcommand{\examnum}{Verifica 2}               %Verifica 2
+\newcommand{\examdate}{4 novembre 2024}                      %29/10/2018
+\newcommand{\timelimit}{1 ora}                   %2 ore
+\newcommand{\topic}{Unità di misura ed equivalenze}                    %Campo elettrico e campo magnetico
+
+\pagestyle{head}
+\firstpageheader{\class}{\examnum\ - Pagina \thepage\ di \numpages}{\examdate}
+\runningheader{\class}{\examnum\ - Pagina \thepage\ di \numpages}{\examdate}
+\runningheadrule
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} r}
+ \textbf{\topic} && \textbf{Durata: \timelimit}\\
+ &&\\
+ \textbf{Nome:} \makebox[2.9in]{\hrulefill} && \\
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+
+
+% Punteggio totale: \numpoints.
+\begin{center}
+\addpoints
+% \gradetable[v][questions]
+\multirowgradetable{1}[questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+
+
+
+
+%DOMANDA SECCA
+\question[35] Rispondi alle seguenti domande di teoria.
+\renewcommand{\labelenumi}{(\Alph{enumi})}
+\begin{enumerate}
+    \item Elenca almeno tre strumenti di misurazione della lunghezza.
+    \item Che cosa è la sensibilità di uno strumento di misura?
+    \item Elenca almeno tre unità di misura derivate da quelle fondamentali.
+    \item Che cosa sono i multipli di una unità di misura?
+    \item Quali sono i sottomultipli del metro?
+    \item Che cosa accade al valore numerico di una misura se passo ad una unità di misura più piccola?
+\end{enumerate}
+\addpoints
+
+
+
+\question[20] La figura in basso rappresenta le misure di una stanza, misurate però con unità di misura diverse. Disegna la piantina della stanza, convertendo tutte le misure in una unità di misura a tua scelta. Calcola il valore della misura ignota.
+\begin{figure}[!ht]\centering
+\begin{tikzpicture}[scale=1.3]
+\node [below] at (5,0) {$ 10 \, m $};
+\node [below] at (6,3) {$ 2 \, m $};
+\node [right] at (10,2.5) {$ 5 \, m $};
+\node [right] at (7,4) {$ 2 \, m $};
+\node [left] at (0,2.5) {$ 5 \, m $};
+\node [left] at (5,4) {$ 2 \, m $};
+\node [above] at (2.5,5) {$ 5 \, m $};
+\node [above] at (8.5,5) {$ 3 \, m $};
+\draw [thick] (0,0) -- (10,0) -- (10,5) -- (7,5) -- (7,3) -- (5,3) -- (5,5) -- (0,5) -- (0,0);
+\end{tikzpicture}
+\end{figure}
+\addpoints
+
+
+\newpage
+%DOMANDA DIVISA IN PIÙ RICHIESTE INDICATE CON (a), (b)...
+\question[15] Converti le seguenti misure in metri:
+\noaddpoints % to omit double points count
+\begin{multicols}{2}
+\begin{parts}
+    \part $ 65 \, dm  = 6,5 \, m $
+
+    ~
+    \part $ 0,987 \, mm  = 0,000987 \, m $
+
+    ~
+    \part $ 320,6 \, cm = 3,26 \, m $
+
+    ~
+
+    ~
+\end{parts}
+\end{multicols}
+\addpoints
+
+
+\question[15] Converti le seguenti misure in L:
+\noaddpoints % to omit double points count
+\begin{multicols}{2}
+\begin{parts}
+    \part $ 1323 \, mL = 1,323 \, L $
+
+    ~
+    \part $ 98 \, dL = 9,8 \, L $
+
+    ~
+    \part $ 0,036 \, daL = 0,36 \, L $
+
+    ~
+
+    ~
+\end{parts}
+\end{multicols}
+\addpoints
+
+\question[15] Converti le seguenti misure nell'unità di misura indicata:
+\noaddpoints % to omit double points count
+\begin{multicols}{2}
+\begin{parts}
+    \part $ 1,7 \, kW = 1700 \, W $
+
+    ~
+    \part $ 320 \, mA = 0,320 \, A $
+
+    ~
+    \part $ 360 \, kBit = 360000 \, Bit $
+
+    ~
+
+    ~
+\end{parts}
+\end{multicols}
+\addpoints
+
+
+
+
+
+\end{questions}
+
+\end{document}
