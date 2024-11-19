@@ -1,0 +1,147 @@
+    INTRODUZIONE
+
+FASCIA DI RISCHIO, dipende dal tipo di attività (vedi anche il codice ATECO)
+
+FORMAZIONE GENERALE E SPECIFICA
+Tutti fanno 4 ore di corso rischi generali.
+
+Per i rischi specifici:
+- basso (4 ore corso rischi specifici)
+    settore amministrativo, estetica, acconciatura, grafica, informatica, commerciale
+- medio (8 ore corso rischi specifici)
+    operatori della formazione
+- alto (12 ore corso rischi specifici)
+    abbigliamento industriale, panetteria, elettricisti, florovivaisti, preparazione pasti
+
+I rischi specifici devono essere pensati in funzione dell'attività effettivamente svolta (principio di effettività, i settori sono molto diversi tra loro).
+
+I ragazzi ricevono una formazione molto simile a quella degli adulti.
+
+Tutte queste indicazioni stanno nella legge sulla sicurezza (in realtà due decreti legislativi)
+DLGS 81/2008, ma DLGS 106/2009 soprattutto, più successive modifiche e integrazioni (ci sono spesso degli aggiornamenti, l'ultimo è stato a dicembre 2021).
+
+Tutto l'asse della sicurezza sul lavoro è costruito sulla responsabilità penale individuale.
+
+La vecchia legge 626 non prevedeva la responsabilità penale.
+
+Altre questioni sono gestite con il: DLGS 231/2001
+richiede il MOG (modello organizzativo di gestione, ogni organizzazione lo organizza come preferisce) e OdV (organismo di vigilanza, che verifica il MOG sia effettivamente applicato).
+
+Il MOG può adottare le linee guida INAIL/2001 oppure le certificazioni ISO45001/2018 o ISO9001/2015.
+
+In questi casi la responsabilità è collettiva.
+
+La sicurezza è inoltre legata alla questioni della gestione dei dati, la privacy (vedi GDPR).
+
+ESISTE ANCHE LA FORMAZIONE SPECIALISTICA
+La formazione specialistica dipende dall'utilizzo di macchine e procedure molto particolari.
+
+
+
+
+
+
+
+ORGANIGRAMMA DELLA SICUREZZA
+
+- Datore di lavoro (non è sempre il "titolare", che può anche fare una delega specifica per la sicurezza).
+nomina il:
+
+- RSPP Responsabile del Servizio di Prevenzione e Protezione, che organizza tutto ciò che è necessario in ambito sicurezza.
+
+Un datore di lavoro può seguire un corso per diventare RSPP, in modo da non dover esternalizzare questo ruolo (molto utilizzato nelle aziende più piccole). Varie figure possono essere concentrate in una sola figura.
+
+L'unico senza questi obblighi è il lavoratore autonomo.
+
+- ASPP, Addetto al Servizio Prevenzione e Protezione, mette in pratica le scelte del RSPP (è una figura che ormai è presente solo nelle scuole). Nelle sedi ECFoP è qualcuno interno alla sede.
+
+- Medico Competente
+
+- Preposto a scuola è il docente di laboratorio, nelle aziende può essere accorpato ad altre figure. Nelle aziende di stage, il tutor dello stage è anche il preposto.
+
+- RLS (Rappresentante dei Lavoratori per la Sicurezza) non fa una valutazione operativa dei rischi, ma assiste alla valutazione stessa. Una volta era associato alle figure sindacali. Avercelo non è un obbligo ma un'opzione.
+
+- addetti alle emergenze (vedi la prova di evacuazione) e al primo soccorso.
+
+Tutte queste figure ricevono una formazione specialistica obbligatoria.
+
+
+
+
+
+PERICOLO E RISCHIO
+- Il pericolo è tutto ciò che noi utilizziamo nelle nostre normali attività. Dipende da come realizziamo ciò che realizziamo. "È tutto pericolo?" Sì! Alcuni pericoli possono diventare rischi.
+
+I pericoli dipendono dal comportamento delle persone.
+
+
+
+- RISCHIO = PERICOLO + PERSONA
+
+- Il danno è conseguenza del rischio!
+
+"Formula del rischio"
+R = f(P,M) con P probabilità e M magnitudo o gravità = P * M
+
+P = {1, 2, 3, 4}
+M = {1, 2, 3, 4}
+
+Esempio: il rischio ergonomico dovuto alla ripetizione di una certa attività! Manuale dell'INAIL!!! Utile per educazione civica. Dipende dalla durata e dal numero di ripetizioni durante il turno di lavoro.
+
+Creo una tabella con il prodotto cartesiano tra le due:
+
+P
+4   V   G   R   R               R = rosso
+3   V   G   R   R               G = giallo
+2   V   G   G   G               V = verde
+1   V   V   V   V
+    1   2   3   4   M
+
+
+Esempio, attività dello stirare, analisi dettagliata (DVR)
+
+ATTIVITÀ        PERICOLO        RISCHIO         P       M
+stirare         ferro           termico
+                vapore          termico
+                elettrico       folgorazione    1       4       prova a collocare questi due dati
+                posizione di    postura         4       3       nella tabella precedente: il rischio di postura
+                    lavoro                                      risulta più grave di quello di folgorazione
+                movimenti       ergonomico
+                    ripetuti
+                vapore          microclima
+
+Come abbassare il rischio? Ad esempio con la prevenzione abbasso la probabilità, con altre attezzature riduco la magnitudo.
+
+
+
+IDEA: CREA UN FILE EXCEL PER LA VALUTAZIONE DEL RISCHIO, CON LA FORMATTAZIONE CONDIZIONALE POSSO COLORARE DI UN COLORE DIVERSO A SECONDA DEL RISULTATO, SIMULANDO LA TABELLA PRECEDENTE.
+
+
+Come riconoscere il pericolo?
+- con la conoscenza (formazione, addestramento, ecc)
+- segnaletica
+- con le associazioni mentali (penso a, ecc)
+- osservazione e ascolto
+- esperienze dirette e indirette
+- immedesimarsi negli altri
+
+
+Come gestisco il rischio e il danno?
+
+La legge mi dice di lavorare su PREVENZIONE e PROTEZIONE, in quest'ordine.
+
+Quando agisco sulla probabilità sto facendo PREVENZIONE:
+- prevenzione oggettiva, lavoro sulle fonti di pericolo presenti nell'ambiente di lavoro
+- prevenzione soggettiva, lavoro sulle conoscenze delle persone perché possano riconoscere il rischio, lavoro sul comportamento e sulla motivazione
+- prevenzione organizzativa: se organizzo l'attività di laboratorio, c'è un ruolo didattico, ma è anche una misura di prevenzione organizzativa.
+
+La mancata organizzazione delle attività in aula, mostra una carenza nella prevenzione organizzativa.
+
+Quando agisco sulla magnitudo del danno sto facendo PROTEZIONE:
+
+Dopo questo lavoro di riduzione della frequenza dei rischi, i rischi che mi rimangono sono i "rischi residui". Come agire su questi? Con la PROTEZIONE:
+- protezione collettiva, DPC (protezione di macchine e attrezzature), ad esempio la ventilazione dei locali in pandemia (FALLO ANCHE ADESSO!! TIPO OGNI 40 minuti (tempo di saturazione di una stanza media), può diventare un compito da far svolgere ai ragazzi, con troppa CO2 i ragazzi si rincoglioniscono)
+- protezione individuale, DPI (dispositive di protezione individuale), ad esempio le mascherine in pandemia
+
+
+
